@@ -15,6 +15,8 @@ These nouns include:
 * `repo`
 * `log`
 * `user`
+* `feedback`
+* `auth`
 
 ## `commit`
 
@@ -150,6 +152,129 @@ All `gt upstack` commands can also be accessed by the shortcut `gt us`.
 
 ## `repo`
 
+{% hint style="info" %}
+All `gt r` commands can also be accessed by the shortcut `gt r`. 
+{% endhint %}
+
+**`gt repo init`**
+* Initialize/re-initialize Graphite in the current git repository. 
+* Init configurations are stored in the `.git/.graphite_repo_config` file.
+
+**`gt [repo sync | rs]`**
+* Sync with remote and delete branches in the stack which have been merged into stack trunk, rebasing any unmerged upstack changes, also offering to resubmit PRs with changed bases and repair dangling Graphite branches.
+* Options
+  * `--show-delete-progress`
+    * Show a rough estimate of progress through deleting branches. (This is commonly used by users running `gt repo sync` in a long-standing git repo with tens/hundreds of dead branches where Graphite has just been initialized.)
+  * `-f`<br/>
+    `--force`
+    * Don't prompt confirmation when Graphite suggests to delete a branch already-merged into main or suggests to resubmit a branch whose PR base has changed.
+  * `--no-pull`
+    * Skip the step where Graphite pulls from remote.
+  * `--no-delete`
+    * Skip the step where Graphite checks whether feature branches have been merged into trunk and suggests to delete them.
+  * `--no-resubmit`
+    * Skip the step where Graphite suggests resubmitting branches whose PR bases differ locally from remote (often because they've been since rebased locally).
+  * `--no-show-dangling`
+    * Skip the step where Graphite checks for dangling branches (i.e. without a tracked parent in Graphite). Dangling branches are often the cause of mysterious bugs in Graphite behavior.
+
+**`gt repo fix`**
+* Search for and remediate common problems in your repo that slow Graphite down and/or cause bugs.
+* Commonly remediated problems include: stale branches, branches with unknown parents.
+* Options
+  * `--show-delete-progress`
+    * Show a rough estimate of progress through deleting branches. (This is commonly used by users running `gt repo sync` in a long-standing git repo with tens/hundreds of dead branches where Graphite has just been initialized.)
+  * `-f`<br/>
+    `--force`
+    * Don't prompt confirmation when Graphite suggests to delete a branch already-merged into main.
+
+**`gt repo max-branch-length`**
+* Print the setting value of `gt repo max-branch-length`. Graphite will track up to this many commits on a branch. e.g. If this is set to 50, Graphite can track branches up to 50 commits long.
+* Increasing this setting will increase the accuracy of Graphite in repos with branches with many commits, but may result in slower Graphite performance.
+* Options:
+  * `--set <max-branch-length>`
+    * Set the value of `max-branch-length`.
+
+**`gt repo max-days-behind-trunk`**
+* Print the setting value of `max-days-behind-trunk`. Graphite will track branches up to `max-days-behind-trunk` days behind trunk.
+* This is often used in repos where users have a plethora of local branches behind trunk causing slow Graphite performance.
+* Options:
+  * `--set <max-days-behind-trunk>`
+    * Set the value of `max-days-behind-trunk`.
+
+**`gt repo max-stacks-behind-trunk`**
+* Print the setting value of `max-stacks-behind-trunk`. Graphite will track the most recent `max-stacks-behind-trunk` number of stacks behind trunk.
+* Options:
+  * `--set <max-stacks-behind-trunk>`
+    * Set the value of `max-stacks-behind-trunk`.
+
+**`gt repo name`**
+* Print Graphite's understanding of the current repo name. e.g. in 'screenplaydev/graphite-cli', this is 'graphite-cli'. 
+* Options:
+  * `--set <name>`
+    * Add a manual override to Graphite's inferred repo name.
+
+**`gt repo owner`** 
+* Print Graphite's understanding of the current repo owner. e.g. in 'screenplaydev/graphite-cli', this is 'screenplaydev'.
+* Options:
+  * `--set <owner>`
+    * Add a manual override to Graphite's inferred repo owner.
+
+**`gt repo trunk`** 
+* Print Graphite's understanding of the trunk branch of the current repo. This trunk branch is used interally in Graphite as the base of all stacks.
+* Options:
+  * `--set <trunk>`
+    * Add a manual override to Graphite's inferred repo trunk.
+
+**`gt repo pr-templates`** 
+* Lists Graphite's view of the repo's GitHub PR templates. These PR templates are in turn used to pre-populate the body content of a PR when a user runs a gt submit command.
+
 ## `log`
 
+{% hint style="info" %}
+All `gt l` commands can also be accessed by the shortcut `gt l`. 
+{% endhint %}
+
+**`gt log`**<br/>
+**`gt log short`**<br/>
+**`gt log long`**
+* Print a visualization of the current repo's stacks in the command line.
+* Options:
+  * `-t`<br/>
+    `--on-trunk`
+    * Only print commits and branches on trunk.
+  * `-b`<br/>
+    `--behind-trunk`
+    * Only print commits and branches behind trunk.
+
 ## `user`
+
+**`gt user branch-prefix`**
+* Print the setting value of `branch-prefix`. Graphite will prepend this prefix to all auto-generated branch names (i.e.
+when you don't specify a branch name when calling `gt branch create`).
+* Options:
+  * `--set <branch-prefix>`
+    * Set the value of `branch-prefix`.
+
+**`gt user tips`**
+* Print whether Graphite tips are enabled.
+* Options:
+  * `--enable`
+    * Enable tips.
+  * `--disable`
+    * Disable tips.
+
+## `feedback`
+
+**`gt feedback`** 
+* Post a string directly to the maintainers' Slack, where they can factor in your feedback, laugh at your jokes, cry at your insults, or test the bounds of Slack injection attacks.
+* Options:
+  * `--with-debug-context`
+    * Include a blob of JSON descripting your repo's state to help with debugging. Run `gt feedback state` to see what's included.
+
+## `auth`
+
+**`gt auth`**
+* Associate an auth token with your Graphite CLI. This token is used to associate your local CLI instance with your Graphite account, allowing us to create and update PRs on GitHub on your behalf. To obtain your CLI token, visit https://app.graphite.dev/activate.
+* Options:
+  * `--token`
+    * Auth token value to save.
