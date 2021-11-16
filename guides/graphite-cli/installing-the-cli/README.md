@@ -3,15 +3,17 @@
 Install the Graphite CLI using Homebrew ([https://brew.sh/](https://brew.sh))
 
 ```bash
-# install Graphite from Homebrew
+# Install Graphite from Homebrew.
 brew install screenplaydev/tap/graphite
 
-# initialize Graphite
+# Initialize Graphite.
 cd ~/my-project
 gt repo init
 
-# authenticate Graphite CLI via the web dashboard (needed to create PRs)
-gt auth
+# Authenticate Graphite CLI via the web dashboard (needed to create PRs).
+# Visit https://app.graphite.dev/activate to obtain your auth token and then
+# paste it below.
+gt auth --token <auth_token>
 ```
 
 If you can't install Graphite via Homebrew (i.e. you develop on Linux), you can still use Graphite by following these steps:
