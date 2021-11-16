@@ -18,6 +18,24 @@ These nouns include:
 * `feedback`
 * `auth`
 
+At a glance, we find that the most commonly useful commands for users to know are:
+* Fetching Changes (e.g. `git pull`)
+  * `gt repo sync`
+* Creating Changes
+  * `gt branch create`
+  * `gt commit create`
+  * `gt commit amend`
+* Rebasing
+  * `gt stack fix`
+  * `gt upstack onto`
+* Submitting Changes
+  * `gt stack submit` 
+  * `gt downstack submit`
+  * `gt upstack submit`
+* Misc
+  * `gt log`
+  * `gt feedback`
+
 ## `commit`
 
 {% hint style="info" %}
