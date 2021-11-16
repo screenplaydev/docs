@@ -7,7 +7,7 @@ If you want to use Graphite to create or update pull requests in GitHub for the 
 Authenticating the Graphite CLI is easy:
 
 1. Sign into [https://app.graphite.dev/activate](https://app.graphite.dev/activate) with your GitHub account
-2. Copy the `gt auth <your_cli_auth_token>` command shown (your CLI auth token will be pre-filled)
+2. Copy the `gt auth --token <your_cli_auth_token>` command shown (your CLI auth token will be pre-filled)
 3. Paste & run it in your terminal
 
 Once you've authenticated the CLI, you should be able to run `gt stack submit` to create or update pull requests in GitHub for every branch in your stack.

@@ -36,7 +36,7 @@ To authenticate your Graphite CLI:
 
 1. Visit [https://app.graphite.dev/activate](https://app.graphite.dev/activate)
 2. Sign in with GitHub to obtain your CLI token
-3. Run `gt auth <your_token>` in your terminal
+3. Run `gt auth --token <your_token>` in your terminal
 
 ### Web dashboard
 
