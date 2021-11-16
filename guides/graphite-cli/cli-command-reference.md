@@ -8,16 +8,16 @@ Graphite commands are formatted as noun-verb combinations where the noun is the 
 
 These nouns include:
 
-* ``[`commit`](cli-command-reference.md#commit)
-* `branch`
-* `stack`
-* `downstack`
-* `upstack`
-* `repo`
-* `log`
-* `user`
-* `feedback`
-* `auth`
+* [`commit`](cli-command-reference.md#commit)
+* [`branch`](cli-command-reference.md#branch)
+* [`stack`](cli-command-reference.md#stack)
+* [`downstack`](cli-command-reference.md#downstack)
+* [`upstack`](cli-command-reference.md#upstack)
+* [`repo`](cli-command-reference.md#repo)
+* [`log`](cli-command-reference.md#log)
+* [`user`](cli-command-reference.md#user)
+* [`feedback`](cli-command-reference.md#feedback)
+* [`auth`](cli-command-reference.md#auth)
 
 At a glance, we find that the most commonly useful commands for users to know are:
 
