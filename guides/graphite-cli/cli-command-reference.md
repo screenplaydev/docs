@@ -4,7 +4,7 @@
 You can always access the full help docs for the Graphite CLI by running `gt --help`
 {% endhint %}
 
-Graphite commands are formatted as a noun-verb combination where the noun is the subject of the command (e.g. `gt branch checkout`).
+Graphite commands are formatted as noun-verb combinations where the noun is the subject of the command (e.g. `gt branch checkout`).
 
 These nouns include:
 * `commit`
@@ -27,23 +27,23 @@ Where possible, prefer using `commit` commands to using their underlying git equ
 * Create a new commit and fix the upstack branches.
 * Options:
   * `-a`<br/>
-    `--all`<br/>
-    Stage all changes before committing.
+    `--all`
+    * Stage all changes before committing.
   * `-m <message>`<br/>
-    `--message <message>`<br/>
-    The message for the new commit.
+    `--message <message>`
+    * The message for the new commit.
 
 `gt [commit amend | ca]`
 * Amend the most recent commit and fix the upstack branches.
 * Options:
   * `-a`<br/>
-    `--all`<br/>
-    Stage all changes before committing.
+    `--all`
+    * Stage all changes before committing.
   * `-m <message>`<br/>
-    `--message <message>`<br/>
-    The updated for the new commit.
-  * `--no-edit`<br/>
-    Don't modify the existing commit message.
+    `--message <message>`
+    * The updated for the new commit.
+  * `--no-edit`
+    * Don't modify the existing commit message.
 
 ## `branch` Commands
 
@@ -55,25 +55,25 @@ A select subset of commands also have combined shortcuts, e.g. `gt branch checko
 * Create new stacked branch.
 * Options:
   * `-a`<br/>
-    `--add-all`<br/>
-    Stage all unstaged changes on the new branch.
+    `--add-all`
+    * Stage all unstaged changes on the new branch.
   * `-m <message>`<br/>
-    `--commit-message <message>`<br/>
-    Commit staged changes on the new branch with this message.
+    `--commit-message <message>`
+    * Commit staged changes on the new branch with this message.
 
 `gt [branch checkout | bco]` 
 * Interactively check out any branch in the repo.
 * Options:
-  * `--branch <name>`<br/>
-    Check out the specified branch instead, i.e. `gt branch checkout main`.
+  * `--branch <name>`
+    * Check out the specified branch instead, i.e. `gt branch checkout main`.
 
 `gt [branch next | bn]`<br/>
 `gt [branch prev | bp]` 
 * Traverse upstack/downstack by one branch.
 * Options
   * `-n <steps>`<br/>
-    `--steps <steps>`<br/>
-    Traverse by `n` branches instead.
+    `--steps <steps>`
+    * Traverse by `n` branches instead.
 
 `gt branch top`<br/>
 `gt branch bottom`
