@@ -7,6 +7,7 @@ To install the Graphite CLI without Homebrew (on Linux for example):
 
 # install the Graphite CLI
 git clone https://github.com/screenplaydev/graphite-cli
+cd graphite-cli
 npm install
 npm run build
 npm link
