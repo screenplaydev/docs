@@ -124,7 +124,7 @@ gt log
 
 Whenever you push a stack of PRs to GitHub, Graphite automatically adds a comment to every PR in the stack to help your reviewers navigate between them:
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/dd938ce0-5330-4fd1-8806-f2a55f7009b4/Screen\_Shot\_2021-09-21\_at\_10.35.14\_AM.png?X-Amz-Algorithm=AWS4-HMAC-SHA256\&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20211013%2Fus-west-2%2Fs3%2Faws4\_request\&X-Amz-Date=20211013T231257Z\&X-Amz-Expires=86400\&X-Amz-Signature=f91c505f8e30f773b5e9d0ff7836c67e8070a4ce2663a45f0482d627a20edf40\&X-Amz-SignedHeaders=host\&response-content-disposition=filename%20%3D%22Screen%2520Shot%25202021-09-21%2520at%252010.35.14%2520AM.png%22)
+![](<../.gitbook/assets/Screen Shot 2021-09-21 at 10.35.14 AM.png>)
 
 Once all the PRs in your stack have been approved, you can merge them all into trunk (see [Landing a stack of branches](https://www.notion.so/Graphite-user-guide-66300dcb2d29453fb1d6ea013a8d4859) for more on this).
 
