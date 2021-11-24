@@ -4,26 +4,6 @@
 Authenticating a new tool with your GitHub account can be scary, so we wanted to be completely transparent about how we integrate with GitHub and make sure your source code is secure.
 {% endhint %}
 
-## What data does Graphite store from the GitHub integration?
-
-tl;dr almost nothing. We've architected our systems to use a minimal amount of data & permissions from our users (within the constraints of GitHub's API), and we'll always be fully transparent about how we use any data and permissions you grant us.
-
-### CLI
-
-Graphite does not store any user source code on its servers from the CLI. When you call `gt stack submit`, the Graphite CLI pushes the branches in your stack to the remote repo in GitHub directly from the client. The only calls from the Graphite server are made to actually open the PRs from the branches which have already been pushed to GitHub. Metadata about which branches were pushed to Github are sent to Graphite servers so we can open those PRs on your behalf.
-
-### Web dashboard
-
-Graphite does not store any source code on its servers from the web dashboard. When you open the dashboard in your browser, it calls GitHub's API directly from the client to retrieve and display pull requests in repos you have access to according to the filter views you've defined. The only data stored on Graphite servers are basic profile metadata (Github ID, username, profile picture) and the auth token generated when you sign in with GitHub, which we use to save your PR filter views and maintain your session.
-
-### Logging
-
-Graphite does not store any user source code on its servers from its logs. During normal usage of the CLI and the website, Graphite will generate and store logs to help us better debug in the event of an error and better understand the profile of our users. Examples of that data include:
-
-* Metadata about your repo: for example, number of branches or counts of Graphite commands being run. We use this to debug failing commands in the CLI (for example, in the past we found a repo with a very high number of branches would cause the CLI to hang.
-* Metadata about your usage: for example, commands being run, command runtime, or any CLI errors. We use this to understand where to further our engineering investment and understand how widespread issues are.
-* Metadata about your Github account: for example, orgs which you're a member of on Github. We use this to track the usage of our product and understand what types of orgs we work best for.
-
 ## What permissions does Graphite need from GitHub?
 
 ### Permissions Graphite asks for (and why):
@@ -84,15 +64,31 @@ Once your token is added, you should be able to do the following:
 
 If this still doesn't resolve your issue, please ping us on Slack so we can troubleshoot!
 
-***
+## What data does Graphite store from the GitHub integration?
+
+tl;dr almost nothing. We've architected our systems to use a minimal amount of data & permissions from our users (within the constraints of GitHub's API), and we'll always be fully transparent about how we use any data and permissions you grant us.
+
+### CLI
+
+Graphite does not store any user source code on its servers from the CLI. When you call `gt stack submit`, the Graphite CLI pushes the branches in your stack to the remote repo in GitHub directly from the client. The only calls from the Graphite server are made to actually open the PRs from the branches which have already been pushed to GitHub. Metadata about which branches were pushed to Github are sent to Graphite servers so we can open those PRs on your behalf.
+
+### Web dashboard
+
+Graphite does not store any source code on its servers from the web dashboard. When you open the dashboard in your browser, it calls GitHub's API directly from the client to retrieve and display pull requests in repos you have access to according to the filter views you've defined. The only data stored on Graphite servers are basic profile metadata (Github ID, username, profile picture) and the auth token generated when you sign in with GitHub, which we use to save your PR filter views and maintain your session.
+
+### Logging
+
+Graphite does not store any user source code on its servers from its logs. During normal usage of the CLI and the website, Graphite will generate and store logs to help us better debug in the event of an error and better understand the profile of our users. Examples of that data include:
+
+* Metadata about your repo: for example, number of branches or counts of Graphite commands being run. We use this to debug failing commands in the CLI (for example, in the past we found a repo with a very high number of branches would cause the CLI to hang.
+* Metadata about your usage: for example, commands being run, command runtime, or any CLI errors. We use this to understand where to further our engineering investment and understand how widespread issues are.
+* Metadata about your Github account: for example, orgs which you're a member of on Github. We use this to track the usage of our product and understand what types of orgs we work best for.
 
 ## What happens if Graphite's GitHub integration changes?
 
 ### Process for upcoming changes
 
 We're iterating on Graphite rapidly, but we'll always over-communicate when it comes to how we interact with your source code from GitHub. If we intend to change the architecture or scope of our GitHub integration in the future relating to source code, we'll give you at least 7 days notice prior to making any changes. Furthermore, if we require additional scopes of access from GitHub, you'll be prompted to sign in again with your account and confirm that you want to grant the additional permissions we've requested.
-
-***
 
 ### Upcoming changes on our roadmap
 
@@ -105,8 +101,6 @@ We soon hope to be able to let developers take actions directly from our dashboa
 #### Caching
 
 In an effort to reduce our usage of the Github API, we may start caching requests (storing the relevant information on our server). At the moment, we are only intending to cache metadata (e.g. repos which you could access, or information about members of your org to display in hover cards), and we are not intending to cache source code, although we will let you know if this changes.
-
-***
 
 ## How does Graphite keep my source code safe?
 
