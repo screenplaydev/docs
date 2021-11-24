@@ -6,7 +6,7 @@ Authenticating a new tool with your GitHub account can be scary, so we wanted to
 
 ## What data does Graphite store from the GitHub integration?
 
-tl;dr almost nothing.  We've architected our systems to use a minimal amount of data & permissions from our users (within the constraints of GitHub's API), and we'll always be fully transparent about how we use any data and permissions you grant us.
+tl;dr almost nothing. We've architected our systems to use a minimal amount of data & permissions from our users (within the constraints of GitHub's API), and we'll always be fully transparent about how we use any data and permissions you grant us.
 
 ### CLI
 
@@ -24,25 +24,42 @@ Graphite does not store any user source code on its servers from its logs. Durin
 * Metadata about your usage: for example, commands being run, command runtime, or any CLI errors. We use this to understand where to further our engineering investment and understand how widespread issues are.
 * Metadata about your Github account: for example, orgs which you're a member of on Github. We use this to track the usage of our product and understand what types of orgs we work best for.
 
-***
-
 ## What permissions does Graphite need from GitHub?
 
-### CLI
+### Permissions Graphite asks for (and why):
 
-You can use the Graphite CLI to manage stacked changes locally without authenticating with your GitHub account - the only command that you need to authenticate to run is `gt stack submit`, which needs to be able to write to the remote repo you're working in to create and/or update pull requests for each branch in your stack.
+![When you sign into the Graphite dashboard for the first time with GitHub, we ask for these permissions](<../.gitbook/assets/Screen Shot 2021-11-23 at 3.32.18 PM.png>)
 
-To authenticate your Graphite CLI:
+#### Here's what each of these permissions is used for:
 
-1. Visit [https://app.graphite.dev/activate](https://app.graphite.dev/activate)
-2. Sign in with GitHub to obtain your CLI token
-3. Run `gt auth --token <your_token>` in your terminal
+* `Organizations and teams (read-only)`
+  * Look up and display profile information about your orgs and teams
+  * Look up and display profile information (i.e. usernames) of other users in your orgs
+  * Look up and display repos in your orgs
+* `Personal user data (read-only)`&#x20;
+  * Display your name
+  * Display your GH username
+  * Display your GH profile picture
+  * Send you transactional emails about Graphite
+* `Repositories (read & write)`
+  * Look up and display pull requests in your repos
+  * Create/update pull requests in your repos
+  * Add comments to pull requests (both the automated stack comment and your review comments)
+  * Review PRs
+  * Merge/land PRs
 
-### Web dashboard
+#### Permissions Graphite asks for, but doesn't use
 
-The [Graphite web dashboard](https://app.graphite.dev) lets you view your queue of pull requests from GitHub. In order to display your PRs, the dashboard needs to be able to read from each repo you want to display PRs for.
+Unfortunately, [GitHub's scopes for OAuth apps](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes) only let us request the blanket `repo` permission, which includes read & write access that we don't need, and don't use as part of Graphite's operations.  These extraneous scopes are:
 
-When you sign in to the Graphite web dashboard with GitHub for the first time, you can select which organizations and repos to grant access to.
+* Issues
+* Wikis
+* Settings
+* Webhooks & services
+* Deploy keys
+* Collaboration invites
+
+**Graphite does not use these scopes,** and we wouldn't ask for them if we weren't forced to by GitHub's limited permissions model for OAuth apps.
 
 ## Using a GitHub Personal Access Token
 
@@ -52,17 +69,17 @@ For cases such as this one, where you want to give command line tools and APIs l
 
 To use a Personal Access Token with Graphite:
 
-1. Generate a new token from your [token settings page on GitHub](https://github.com/settings/tokens) with the following permissions:
-   * `repo` (for the repo you want to work in)
+1. Generate a new token from your [token settings page on GitHub](https://github.com/settings/tokens) with the following permissions
    * `read:org`
    * `read:user`
    * `user:email`
+   * `repo` (for the repo you want to work in)
 2. \[If your org has SSO] Check the [token settings page on GitHub](https://github.com/settings/tokens) and make sure you enable SSO for the Personal Access Token you're using with Graphite.
 3. Next, add your new token to Graphite via the [Graphite web dashboard settings page](https://app.graphite.dev/settings).
 
 Once your token is added, you should be able to do the following:
 
-* Select your repo from the dropdowns in each section of the Graphite web dashboard
+* Select your repo from the drop-downs in each section of the Graphite web dashboard
 * Run `gt stack submit` in the Graphite CLI to create pull requests in GitHub for every branch in your stack
 
 If this still doesn't resolve your issue, please ping us on Slack so we can troubleshoot!
@@ -93,7 +110,7 @@ In an effort to reduce our usage of the Github API, we may start caching request
 
 ## How does Graphite keep my source code safe?
 
-We understand how important it is to keep your source code safe - that's why we built Graphite with security & privacy best practices from day 1.  We're more than happy to provide you with the following company policies to give you a better sense of how we approach security at Graphite:
+We understand how important it is to keep your source code safe - that's why we built Graphite with security & privacy best practices from day 1. We're more than happy to provide you with the following company policies to give you a better sense of how we approach security at Graphite:
 
 * Security Program Overview
 * Data Protection Policy
