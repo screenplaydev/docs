@@ -299,7 +299,7 @@ All `gt l` commands can also be accessed by the shortcut `gt l`.
 * Print the setting value of `branch-prefix`. Graphite will prepend this prefix to all auto-generated branch names (i.e. when you don't specify a branch name when calling `gt branch create`).
 * Options:
   * `--set <branch-prefix>`
-    * Set the value of `branch-prefix`.
+    * Set the value of `branch-prefix` (string).
 
 **`gt user tips`**
 

@@ -13,12 +13,15 @@ gt branch checkout main
 
 # create a new branch off of main with your changes and add a commit
 gt add -A # add all unstaged change (same syntax as git add)
-gt branch create part_1 # -> creates a branch named feat-stories-API
-gt commit create -m "part 1" # -> creates a commit with message "part 1"
+gt branch create -m "part 1" # -> creates a commit with message "part 1" on a branch named "part_1" (inferred from your branch name) 
 
-# alternatively, you can combine the last 3 commands into a single line:
-gt branch create -a -m "part 1" # -> Graphite will create a branch name based on your commit message
+# alternatively, you can combine the last 2 commands into a single line:
+gt branch create -a -m "part 1" # -> creates a commit with message "part 1" on a branch named "part_1" 
 ```
+
+{% hint style="info" %}
+Because you didn't pass in a branch name in the above example, `gt branch create` auto-generated a branch name from your commit message.  You can configure a prefix for `gt branch create` to add to all of your auto-generated branch names using `gt user branch-prefix` - see the [**CLI command reference**](cli-command-reference.md#user) for more details.
+{% endhint %}
 
 {% hint style="warning" %}
 Note that unlike a standard git workflow - where you create a new branch before working on your feature - with `gt` you do the following:

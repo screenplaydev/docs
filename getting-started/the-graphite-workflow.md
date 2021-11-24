@@ -32,6 +32,10 @@ gt branch create feat-stories-API -m "Stories - API [1/3]"
 gt branch create -a feat-stories-API -m "Stories - API [1/3]"
 ```
 
+{% hint style="info" %}
+Note that if you don't pass in a branch name, `gt branch create` will auto-generate a branch name from your commit message.  You can configure a prefix for `gt branch create` to add to all of your auto-generated branch names using `gt user branch-prefix` - see the [**CLI command reference**](../guides/graphite-cli/cli-command-reference.md#user) for more details.
+{% endhint %}
+
 ![](<../.gitbook/assets/01 new branch.png>)
 
 Note that unlike a standard git workflow - where you create a new branch before working on your feature - with `gt` you do the following:
