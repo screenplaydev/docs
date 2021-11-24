@@ -38,5 +38,5 @@ gt stack fix --regen
 ```
 
 {% hint style="info" %}
-`gt stack fix --regen` will update Graphite's record of your stacks to reflect **branch dependencies in your git repo** - i.e. if you create a new branch or commit mid-stack and then run `gt stack fix --rebase`, Graphite's record of your stacks will now show that you've intentionally added a fork in your stack.
+`gt stack fix --regen` will update Graphite's record of your stacks to reflect **branch dependencies in your git repo** - i.e. if you create a new branch or commit mid-stack and then run `gt stack fix --regen`, Graphite's record of your stacks will now show that you've intentionally added a fork in your stack.
 {% endhint %}

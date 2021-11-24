@@ -25,7 +25,7 @@ gt stack submit
 ![Edit the PR body](<../../.gitbook/assets/Screen Shot 2021-10-14 at 4.51.37 PM.png>)
 
 {% hint style="warning" %}
-Graphite selects the text editor for the PR body based on your shell's `$EDITOR` variable.  If you'd like to use a different text editor (i.e. `vim`), make sure to set `$EDITOR = vim` in your shell before running `gt stack submit`.
+Graphite selects the text editor for the PR body based on your shell's `$EDITOR` variable.  If you'd like to use a different text editor (i.e. `vim`), make sure to set make sure to set `EDITOR=vim` in your shell before running `gt stack submit`.
 {% endhint %}
 
 {% hint style="info" %}
