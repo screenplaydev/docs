@@ -14,6 +14,8 @@ Graphite is an [**open source CLI**](https://github.com/screenplaydev/graphite-c
 
 {% embed url="https://www.youtube.com/watch?v=-EYpPlQdXH0" %}
 
+Graphite is designed to be used at work - unfortunately we don't yet support submitting PRs to open-source repos as an external contributor (i.e. without write access) due to limitations of GitHub.
+
 ## What can you do with Graphite?
 
 With Graphite, you can:
