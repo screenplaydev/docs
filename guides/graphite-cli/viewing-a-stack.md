@@ -1,7 +1,7 @@
 # Viewing a stack
 
 {% hint style="info" %}
-Graphite's CLI **** gives you 3 different ways to visualize your current stack.
+Graphite's CLI** **gives you 3 different ways to visualize your current stack.
 {% endhint %}
 
 ### `gt log` (most common)
