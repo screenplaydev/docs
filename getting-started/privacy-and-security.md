@@ -16,7 +16,7 @@ Authenticating a new tool with your GitHub account can be scary, so we wanted to
   * Look up and display profile information about your orgs and teams
   * Look up and display profile information (i.e. usernames) of other users in your orgs
   * Look up and display repos in your orgs
-* `Personal user data (read-only)`&#x20;
+* `Personal user data (read-only)`
   * Display your name
   * Display your GH username
   * Display your GH profile picture
@@ -30,7 +30,7 @@ Authenticating a new tool with your GitHub account can be scary, so we wanted to
 
 #### Permissions Graphite asks for, but doesn't use
 
-Unfortunately, [GitHub's scopes for OAuth apps](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes) only let us request the blanket `repo` permission, which includes read & write access that we don't need, and don't use as part of Graphite's operations.  These extraneous scopes are:
+Unfortunately, [GitHub's scopes for OAuth apps](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes) only let us request the blanket `repo` permission, which includes read & write access that we don't need, and don't use as part of Graphite's operations. These extraneous scopes are:
 
 * Issues
 * Wikis
@@ -49,11 +49,13 @@ For cases such as this one, where you want to give command line tools and APIs l
 
 To use a Personal Access Token with Graphite:
 
-1. Generate a new token from your [token settings page on GitHub](https://github.com/settings/tokens) with the following permissions
-   * `read:org`
-   * `read:user`
-   * `user:email`
-   * `repo` (for the repo you want to work in)
+1. [Generate a new token](https://github.com/settings/tokens/new) from on Github and add the following access scopes:
+   * `repo` all scopes
+   * Under `admin:org`&#x20;
+     * `read:org`
+   * Under `user`
+     * `read:user`
+     * `user:email`
 2. \[If your org has SSO] Check the [token settings page on GitHub](https://github.com/settings/tokens) and make sure you enable SSO for the Personal Access Token you're using with Graphite.
 3. Next, add your new token to Graphite via the [Graphite web dashboard settings page](https://app.graphite.dev/settings).
 

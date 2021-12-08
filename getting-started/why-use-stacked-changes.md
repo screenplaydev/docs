@@ -6,7 +6,7 @@ Feel free to skip this section if you've worked with stacked changes before!
 
 ## What is a stack?
 
-A stack is **a sequence of dependent code changes, **each building off of its parent. Stacks enable users to break up a large engineering task into a series of small, incremental code changes, **each of which can be tested, reviewed, and merged independently**.
+A stack is **a sequence of dependent code changes,** each building off of its parent. Stacks enable users to break up a large engineering task into a series of small, incremental code changes, **each of which can be tested, reviewed, and merged independently**.
 
 ## Why use stacked changes?
 
