@@ -8,11 +8,11 @@ Everything is still a little early, so please add comments if you have any quest
 
 ## What is Graphite?
 
-Graphite is an [**open source CLI**](https://github.com/screenplaydev/graphite-cli) + a [**code review dashboard**](http://app.graphite.dev) on top of GitHub that **makes** **creating & reviewing **[**stacked changes**](getting-started/why-use-stacked-changes.md)** fast & intuitive**. Anyone can start using Graphite individually without needing their coworkers to change tools - we seamlessly sync your code changes and reviews. We built Graphite because we missed tools like Phabricator (at Facebook) and Critique (Google) that help engineers create, approve, and ship small, incremental changes, and long-term we’re passionate about creating a powerful, modern code review experience (think Linear for CR) for fast-moving eng teams.
+Graphite is an [**open source CLI**](https://github.com/screenplaydev/graphite-cli) + a [**code review dashboard**](http://app.graphite.dev) on top of GitHub that **makes** **creating & reviewing** [**stacked changes**](getting-started/why-use-stacked-changes.md) **fast & intuitive**. Anyone can start using Graphite individually without needing their coworkers to change tools - we seamlessly sync your code changes and reviews. We built Graphite because we missed tools like Phabricator (at Facebook) and Critique (Google) that help engineers create, approve, and ship small, incremental changes, and long-term we’re passionate about creating a powerful, modern code review experience (think Linear for CR) for fast-moving eng teams.
 
-**Have a few minutes?** Check out quick video demo from Tomas & Merrill on the Graphite team:
+**Have a few minutes?** Check out quick video demo from Merrill on the Graphite team:
 
-{% embed url="https://www.youtube.com/watch?v=-EYpPlQdXH0" %}
+{% embed url="https://www.youtube.com/watch?v=uWGguuaGQCo" %}
 
 ## What can you do with Graphite?
 
