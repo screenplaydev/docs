@@ -1,4 +1,4 @@
-# Syncing & resolving conflicts
+# Syncing with remote
 
 {% hint style="info" %}
 Very often as you're building, the remote trunk branch will move ahead of your local repository, and you'll want to pull in the latest changes and resolve any conflicts before you land your pull requests.
@@ -11,13 +11,15 @@ If your remote trunk branch (i.e. `origin/main`) gets ahead of your local reposi
 `gt repo sync` does 3 things:
 
 1. Pulls in the latest changes from `origin/main` (or whatever your trunk branch is)
-2. Prompts you to delete any stale local branches which have been merged in
+2. Prompts you to delete any stale local branches which have been merged in (this works even if you use squash-and-merge)
 3. Recursively rebases your up-stack branches which have not been merged
 
-## Resolving conflicts
+If you want to automatically push any local branches which were rebased as a result of `gt repo sync`, you can pass the `-r` flag, i.e. `gt repo sync -r`.
 
-{% hint style="warning" %}
-We're actively working on improving the experience of resolving merge conflicts with `gt` - expect a significantly improved workflow here soon.
+## Resolving rebase conflicts
+
+{% hint style="info" %}
+Resolving rebase conflicts while running `gt repo sync` works just like it does for `gt commit create` or `gt commit amend`.
 {% endhint %}
 
 If `gt repo sync` encounters any conflicts as it recursively rebases your stacked branches, you'll be prompted to resolve your conflicts before continuing.  You can do this with the following workflow:
@@ -26,15 +28,13 @@ If `gt repo sync` encounters any conflicts as it recursively rebases your stacke
 # find which files have conflicts
 gt status
 
-# * resolve the conflicts *
+# * resolve the rebase conflicts *
 
-# commit your changes
-gt commit create -a -m "your commit message"
+# add your changes
+gt add -A
 
-# re-submit your stack to GitHub
-gt stack submit
+# continue the rebase operation
+gt continue
 ```
-
-Again, `gt commit create` will handle all of the recursive rebases needed to bring your stack up-to-date.
 
 Now that you've resolved any conflicts, it's time to land your stack!

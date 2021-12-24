@@ -22,7 +22,7 @@
   * [Navigating a stack](guides/graphite-cli/navigating-a-stack.md)
   * [Updating a mid-stack branch](guides/graphite-cli/updating-a-mid-stack-branch.md)
   * [Creating pull requests](guides/graphite-cli/creating-pull-requests.md)
-  * [Syncing & resolving conflicts](guides/graphite-cli/syncing-and-resolving-conflicts.md)
+  * [Syncing with remote](guides/graphite-cli/syncing-and-resolving-conflicts.md)
   * [Landing a stack](guides/graphite-cli/landing-a-stack.md)
   * [Command shortcuts](guides/graphite-cli/command-shortcuts.md)
   * [Mixing gt and git](guides/graphite-cli/mixing-gt-and-git.md)

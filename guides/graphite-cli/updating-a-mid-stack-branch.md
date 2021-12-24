@@ -18,12 +18,29 @@ gt commit create -a -m "my fourth commit" # -> automatically rebases both upstac
 
 ## Amending commits
 
-If you prefer to go back and amend a previous commit, this is just as easy with `gt`:
+If you prefer to just amend a previous commit, this is just as easy with `gt`:
 
 ```bash
 # address review comments by amending a commit
 gt branch checkout my_stack_level_1
 gt commit amend -a -m "my updated commit" # -> automatically rebases both upstack branches
+```
+
+## Resolving rebase conflicts
+
+If `gt commit create` or `gt commit amend` encounter any conflicts as they recursively rebase your stacked branches, you'll be prompted to resolve your conflicts before continuing.  You can do this with the following workflow:
+
+```
+# find which files have conflicts
+gt status
+
+# * resolve the rebase conflicts *
+
+# add your changes
+gt add -A
+
+# continue the rebase operation
+gt continue
 ```
 
 Now that you can create, navigate, and update stacks, it's time to turn them into pull requests!
