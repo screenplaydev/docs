@@ -27,7 +27,7 @@ You can quickly toggle Focus Mode (show/hide the right-side tray) on the PR page
 To add a comment, highlight the lines you want to comment on (you can select one line or multiple lines of code on either side of the diff), enter your comment, and click `Save` (or use `CMD + Enter`).  Your comment is now pending - it will show up to you in GitHub as a pending comment, and you can go back and edit it as much as you like before you complete your review (using the review options on the PR title bar).
 
 {% hint style="warning" %}
-You need to click one of the review options ("Approve", "Request changes", or "Just add comments") on the PR title bar for pending comments to be shared with the author.
+You need to click one of the review options ("Approve", "Request changes", or "Just add comments") on the PR title bar for pending comments to be shared with the author.  This also applies when you're replying to existing comments.
 {% endhint %}
 
 ## Adding GIFs & memes to review comments
