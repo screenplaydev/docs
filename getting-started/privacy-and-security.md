@@ -1,7 +1,7 @@
 # Privacy & security
 
 {% hint style="info" %}
-Authenticating a new tool with your GitHub account can be scary, so we wanted to be completely transparent about how we integrate with GitHub and make sure your source code is secure.
+Authenticating a new tool with your GitHub account can be scary, so we wanted to be completely transparent about how we integrate with GitHub and make sure your source code is secure.  If you want to limit the repos Graphite can access, you can sign in using our GitHub App (see below).
 {% endhint %}
 
 ## What permissions does Graphite need from GitHub?
@@ -65,6 +65,27 @@ Once your token is added, you should be able to do the following:
 * Run `gt stack submit` in the Graphite CLI to create pull requests in GitHub for every branch in your stack
 
 If this still doesn't resolve your issue, please ping us on Slack so we can troubleshoot!
+
+## Signing into Graphite with a GitHub App
+
+Lastly, if you'd prefer to limit Graphite's access to select repos, you can sign in using our GitHub App when you first create your Graphite account.  Here's what the GitHub App signup flow looks like:
+
+![When you sign into Graphite using our GitHub App, you can choose which repos you allow Graphite to access](../.gitbook/assets/github\_app\_permissions.gif)
+
+The Graphite GitHub App asks for the following permissions:
+
+* `Read: actions, checks, code, commit statuses, metadata`
+  * Used to display PRs + their relevant statuses and metadata on Graphite
+* `Read & write: pull requests`
+  * Used to create and display PRs on Graphite
+* `Read: user emails`
+  * Used to send transactional emails about Graphite
+* `Read & write: user profiles`
+  * Used to show user profiles on Graphite - note that Graphite does not use the `write` permission, but GitHub does not allow us to request just the `read` permission here when using a GitHub App
+
+{% hint style="info" %}
+Note that depending on your GitHub org's settings, you may have to "request to add" the Graphite GitHub App - one of your GitHub org admins will then have to approve the app for use, at which point you'll be able to sign into Graphite.
+{% endhint %}
 
 ## What data does Graphite store from the GitHub integration?
 
