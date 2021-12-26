@@ -6,6 +6,6 @@ Along with the CLI, Graphite includes a [**web dashboard**](https://app.graphite
 
 Get started with the Graphite dashboard:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="getting-started-with-the-dashboard.md" %}
+[getting-started-with-the-dashboard.md](getting-started-with-the-dashboard.md)
 {% endcontent-ref %}

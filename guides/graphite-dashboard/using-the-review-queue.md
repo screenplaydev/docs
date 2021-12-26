@@ -26,7 +26,7 @@ Each PR in the table has (from left to right):
 * Lines added/deleted
 * Last updated time (by default, the table is sorted by most recently updated)
 
-Clicking each row will take you to the associated pull request in GitHub, or, if you're part of the code review alpha, will take you to the Graphite code review interface for the pull request - more info here:
+Clicking each row will take you to the Graphite code review interface for the pull request - more info here:
 
 {% content-ref url="reviewing-code-with-graphite-alpha.md" %}
 [reviewing-code-with-graphite-alpha.md](reviewing-code-with-graphite-alpha.md)

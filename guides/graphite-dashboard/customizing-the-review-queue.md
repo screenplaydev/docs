@@ -4,7 +4,7 @@
 
 If you want to customize a section, click the ⚙️ icon in the upper right of the section to open the section editing modal:
 
-![](<../../.gitbook/assets/Screen Shot 2021-10-14 at 7.58.11 PM.png>)
+![Quickly customize your filters and re-arrange your dashboard sections ](../../.gitbook/assets/customize\_pr\_inboxes.gif)
 
 From this modal, you can update the section name, repositories, and filters, choose whether to include PRs in the section on the favicon badge count, and delete the section.
 
