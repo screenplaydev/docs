@@ -194,8 +194,22 @@ All `gt repo` commands can also be accessed by the shortcut `gt r`.
 
 **`gt repo init`**
 
-* Initialize/re-initialize Graphite in the current git repository.
+* Initialize/re-initialize Graphite in the current git repository. Default mode for this command is interactive and you will be prompted for specifying your trunk branch and branches to ignore.
 * Init configurations are stored in the `.git/.graphite_repo_config` file.
+* Options
+  * `--trunk`
+    * The name of your trunk branch.
+  * `--ignore-branches`
+    * A list of branches (or glob patterns) that Graphite should ignore when tracking your stacks (i.e. branches you never intend to merge into trunk).
+
+**`gt repo ignored-branches`**
+* Specify glob patterns matching branch names for Graphite to ignore. Often branches that you never plan to create PRs and merge into trunk.
+* This configuration is stored in the `.git/.graphite_repo_config` file inside your repo directory.
+* Options
+  * `--add`
+    * Add a branch or glob pattern to be ignored by Graphite.
+  * `--remove`
+    * Remove a branch or glob pattern from being ignored by Graphite.
 
 **`gt repo sync` ** or ** `gt rs`**
 
@@ -205,7 +219,7 @@ All `gt repo` commands can also be accessed by the shortcut `gt r`.
     * Show a rough estimate of progress through deleting branches. (This is commonly used by users running `gt repo sync` in a long-standing git repo with tens/hundreds of dead branches where Graphite has just been initialized.)
   * `-f`\
     `--force`
-    * Don't prompt confirmation when Graphite suggests to delete a branch already-merged into main or suggests to resubmit a branch whose PR base has changed.
+    * Don't prompt confirmation when Graphite suggest deleting a branch already-merged into main or suggests to resubmit a branch whose PR base has changed.
   * `--no-pull`
     * Skip the step where Graphite pulls from remote.
   * `--no-delete`
@@ -224,7 +238,7 @@ All `gt repo` commands can also be accessed by the shortcut `gt r`.
     * Show a rough estimate of progress through deleting branches. (This is commonly used by users running `gt repo sync` in a long-standing git repo with tens/hundreds of dead branches where Graphite has just been initialized.)
   * `-f`\
     `--force`
-    * Don't prompt confirmation when Graphite suggests to delete a branch already-merged into main.
+    * Don't prompt confirmation when Graphite suggests deleting a branch already-merged into main.
 
 **`gt repo max-branch-length`**
 
@@ -318,7 +332,7 @@ All `gt log` commands can also be accessed by the shortcut `gt l`.
 * Post a string directly to the maintainers' Slack, where they can factor in your feedback, laugh at your jokes, cry at your insults, or test the bounds of Slack injection attacks.
 * Options:
   * `--with-debug-context`
-    * Include a blob of JSON descripting your repo's state to help with debugging. Run `gt feedback state` to see what's included.
+    * Include a blob of JSON describing your repo's state to help with debugging. Run `gt feedback state` to see what's included.
 
 ## `auth`
 
