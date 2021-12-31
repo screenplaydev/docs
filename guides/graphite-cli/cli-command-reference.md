@@ -238,7 +238,7 @@ All `gt repo` commands can also be accessed by the shortcut `gt r`.
     * Show a rough estimate of progress through deleting branches. (This is commonly used by users running `gt repo sync` in a long-standing git repo with tens/hundreds of dead branches where Graphite has just been initialized.)
   * `-f`\
     `--force`
-    * Skip prompting to delete feature branches that have been merged into trunk. (may include deleting already merged branches and setting branch parents).
+    * Skip prompting to delete feature branches that have been merged into trunk. Instead, Graphite will take the default actions (may include deleting already merged branches and setting branch parents).
 
 **`gt repo max-branch-length`**
 
