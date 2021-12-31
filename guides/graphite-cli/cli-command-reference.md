@@ -219,7 +219,7 @@ All `gt repo` commands can also be accessed by the shortcut `gt r`.
     * Show a rough estimate of progress through deleting branches. (This is commonly used by users running `gt repo sync` in a long-standing git repo with tens/hundreds of dead branches where Graphite has just been initialized.)
   * `-f`\
     `--force`
-    * Suppress prompts when Graphite makes suggestions for deleting a branch which is already merged into main or to resubmit a branch whose PR base has changed.
+    * Skip prompting to delete feature branches that have been merged into trunk, and suggesting resubmission of branches whose PR bases differ locally from remote. Instead, Graphite will take the default actions. To override default options, use one of the additional flags like `--no-delete` or `--no-resubmit`
   * `--no-pull`
     * Skip the step where Graphite pulls from remote.
   * `--no-delete`
@@ -238,7 +238,7 @@ All `gt repo` commands can also be accessed by the shortcut `gt r`.
     * Show a rough estimate of progress through deleting branches. (This is commonly used by users running `gt repo sync` in a long-standing git repo with tens/hundreds of dead branches where Graphite has just been initialized.)
   * `-f`\
     `--force`
-    * Suppress prompts when Graphite makes suggestions for deleting a branch which is already merged into main.
+    * Skip prompting to delete feature branches that have been merged into trunk. (may include deleting already merged branches and setting branch parents).
 
 **`gt repo max-branch-length`**
 
