@@ -12,7 +12,7 @@ Everything is still a little early, so please add comments if you have any quest
 
 **Have a few minutes?** Check out quick video demo from Merrill on the Graphite team:
 
-{% embed url="https://www.youtube.com/watch?v=uWGguuaGQCo" %}
+{% embed url="https://youtu.be/pP0AYz9ttC0" %}
 
 ## What can you do with Graphite?
 
