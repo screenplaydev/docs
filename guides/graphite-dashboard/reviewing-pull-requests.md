@@ -32,6 +32,10 @@ To add a comment, highlight the lines you want to comment on (you can select one
 You need to click one of the review options ("Approve", "Request changes", or "Just add comments") on the PR title bar for pending comments to be shared with the author.  This also applies when you're replying to existing comments.
 {% endhint %}
 
+Best of all, Graphite enables you to comment anywhere on a PR - not just lines that changed:
+
+!["Out-of-bounds" comments will render perfectly in Graphite, and show a note to the author in GitHub noting the referenced lines](../../.gitbook/assets/comment\_anywhere\_100.gif)
+
 ## Adding GIFs & memes to review comments
 
 One of the features we missed the most from Phabricator was the ability to quickly add GIFs & memes to our code reviews to keep them lighthearted and fun.  That's why we brought back first-class support for GIFs & memes in Graphite!
