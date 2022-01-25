@@ -37,3 +37,7 @@
   * [Team insights \[alpha\]](guides/graphite-dashboard/team-insights-alpha.md)
   * [Feature requests & bugs](guides/graphite-dashboard/feature-requests-and-bugs.md)
   * [Share Graphite with your team](guides/graphite-dashboard/share-graphite-with-your-team.md)
+
+## Reference
+
+* [PAT permissions](reference/pat-permissions.md)
