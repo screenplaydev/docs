@@ -11,16 +11,18 @@ By default, Graphite shows you a timeline of changes, comments, and reviews for 
 * Clicking a comment which references a specific line of code will scroll that change into view
 * Clicking a commit currently takes you to GitHub, but will soon show the diff for that commit only in Graphite
 
-To show the file tree, click the 🗂 icon in the top right corner of the right-side tray.  The file tree shows you the subdirectories of all files changed in a PR:
+To show the file tree, click the 🗂  icon in the top right corner of the right-side tray or use the keyboard shortcut `Shift + F`.  The file tree shows you the subdirectories of all files changed in a PR:
 
 * Clicking on a changed file will scroll it into view
 * New and deleted filenames highlighted green & red respectively
 
-To enter Focus Mode and hide the right side tray altogether, just click the ⏭ icon in the top left of the timeline/file tree tray.  You can show it again by clicking the "⌄" icon on the PR title bar.
+To enter Focus Mode and hide the right side tray altogether, just click the ⏭  icon in the top left of the timeline/file tree tray or use the keyboard shortcut `F`.  You can show it again by clicking the "⌄" icon on the PR title bar.
 
 {% hint style="info" %}
-You can quickly toggle Focus Mode (show/hide the right-side tray) on the PR page with the keyboard shortcut `C`.
+You can quickly toggle Focus Mode (show/hide the right-side tray) on the PR page with the keyboard shortcut `F`, show the timeline with `Shift + C`, and show the file tree with `Shift + F`.
 {% endhint %}
+
+![Easily show/hide the timeline & file tree as you're reviewing PRs](../../.gitbook/assets/timeline\_and\_file\_tree\_100.gif)
 
 ## Adding comments
 
@@ -34,7 +36,7 @@ You need to click one of the review options ("Approve", "Request changes", or "J
 
 One of the features we missed the most from Phabricator was the ability to quickly add GIFs & memes to our code reviews to keep them lighthearted and fun.  That's why we brought back first-class support for GIFs & memes in Graphite!
 
-![Find the perfect GIF for your review with Giphy, choose one from your team's meme library, or upload a new one](<../../.gitbook/assets/gifs\_and\_memes (1).gif>)
+![Find the perfect GIF for your review with Giphy, choose one from your team's meme library, or upload a new one](../../.gitbook/assets/gifs\_and\_memes\_100.gif)
 
 Adding a GIF is easy with our Giphy integration:
 
@@ -64,4 +66,4 @@ Lastly, you can upload your own GIFs & memes to your team's meme library:
 
 Graphite makes it easy to review large stacks of PRs at once. From your PR inbox, just click into a pull request to see the PR details, code changes, and comments. You can always see where the current PR sits and navigate to any of the other PRs in a stack with the "Show stack" button, or by using the keyboard shortcut `S`.  Starting from the bottom of the stack, just add your comments, choose your review outcome, and move on to the next PR in the stack!
 
-![Use the stack visualization modal to quickly navigate between PRs in a stack as you review](<../../.gitbook/assets/review\_stacks (1).gif>)
+![Use the stack visualization modal to quickly navigate between PRs in a stack as you review](<../../.gitbook/assets/review\_stacks\_100 (1).gif>)

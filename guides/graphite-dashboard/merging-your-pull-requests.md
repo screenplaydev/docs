@@ -4,7 +4,7 @@
 
 Once your PR has been approved & is passing CI (+ any other checks/merge protections you've enabled in GitHub), you'll be able to merge it from Graphite.  Merging a single PR is easy - just hit "Merge" on the right side of the PR title bar.
 
-![Click "Merge" to merge a PR from Graphite - you can also use the dropdown to choose a different merge strategy](../../.gitbook/assets/merge.gif)
+![Click "Merge" to merge a PR from Graphite - you can also use the dropdown to choose a different merge strategy](../../.gitbook/assets/merge\_100.gif)
 
 You can use the dropdown on the `Merge` button to select a different merge strategy (Graphite will pull in your default merge strategy from GitHub).  Once your PR has been merged, you'll see a confirmation snackbar in the bottom left corner of the screen.
 
@@ -16,7 +16,9 @@ If you're using the Graphite CLI, you'll want to make sure to run `gt repo sync`
 
 When you view a PR that is part of a stack (and not the bottom-most PR in that stack), instead of the `Merge` button you'll see `Merge all (n)`, where "n" is the number of PRs below the current PR in the stack + the current PR.  `Merge all (n)` lets you kick off a job to have Graphite merge every PR in the stack up thru the current PR into your trunk branch, starting from the bottom of the stack.&#x20;
 
-You can select a merge strategy for `Merge all (n)` to use, and it will run until it either completes the merges thru the PR you triggered it from, or until it hits a merge conflict or CI failure (at which point it will stop).
+You can select a merge strategy for `Merge all (n)` to use, and it will run until it either completes the merges thru the PR you triggered it from, or until it hits a merge conflict or CI failure (at which point it will stop):
+
+![Merge an entire stack of PRs at once](../../.gitbook/assets/merge\_all\_100.gif)
 
 `Merge all (n)` will also add a comment to the affected PRs in GitHub, so that your colleagues can see that those PRs are queued to be merged or are in the process of being merged:
 

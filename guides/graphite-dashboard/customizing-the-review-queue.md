@@ -1,12 +1,22 @@
-# Customizing the review queue
+# Customizing your PR inboxes
 
-## Editing a section
+## Setting & updating repos
 
-If you want to customize a section, click the ⚙️ icon in the upper right of the section to open the section editing modal:
+During onboarding, you chose a set of "global repos" to use with the Graphite dashboard.  By default, all of your PR inbox sections will use these global repos, which you can view & update using the repo selector in the upper left of the dashboard:
 
-![Quickly customize your filters and re-arrange your dashboard sections ](../../.gitbook/assets/customize\_pr\_inboxes.gif)
+![Updating the global repos for your PR inboxes](../../.gitbook/assets/global\_repo\_selector\_100.gif)
 
-From this modal, you can update the section name, repositories, and filters, choose whether to include PRs in the section on the favicon badge count, and delete the section.
+If you want to use a different set of repos for a particular section, you can click "Default repos selected" in the upper right of the section and choose different repos from the dropdown:
+
+![Updating the repos for a specific PR inbox section to be different from the global repos](../../.gitbook/assets/section\_repo\_selector\_100.gif)
+
+## Customizing a section's filters
+
+If you want to customize a section's filters, click the ⚙️  icon in the upper right of the section to open the section editing modal:
+
+![Quickly customize your filters and repos for a section](../../.gitbook/assets/customize\_pr\_inboxes\_100.gif)
+
+From this modal, you can update the section name and filters, choose whether to include PRs in the section on the favicon badge count, and delete the section.
 
 ## Creating a new section
 
@@ -21,5 +31,5 @@ To rearrange your sections, just drag and drop the two horizontal lines at the t
 ![](<../../.gitbook/assets/Screen Shot 2021-10-14 at 8.06.47 PM.png>)
 
 {% hint style="success" %}
-Once you've set up the review queue to your liking, we recommend you bookmark it and use it as your daily dashboard for pull requests!
+Once you've set up your PR inboxes to your liking, we recommend you bookmark the Graphite dashboard and use it as your daily starting point for code review!
 {% endhint %}
