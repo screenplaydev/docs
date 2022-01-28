@@ -43,4 +43,8 @@ gt add -A
 gt continue
 ```
 
+Here's a video walkthrough of what this looks like:
+
+{% embed url="https://youtu.be/-KfI3aRaoSE" %}
+
 Now that you can create, navigate, and update stacks, it's time to turn them into pull requests!
