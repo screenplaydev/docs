@@ -32,6 +32,8 @@ Graphite selects the text editor for the PR body based on your shell's `$EDITOR`
 If you have a pull request template saved locally for GitHub, Graphite will automatically detect it and add it to the PR for you to fill out.
 {% endhint %}
 
+You can optionally pass `--reviewers` or `-r` to manually specify reviewers for the new pull requests. By default, Graphite will just assign any reviewers specified by [CODEOWNERS files](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) in your repo.
+
 ![](<../../.gitbook/assets/Screen Shot 2021-10-14 at 4.51.49 PM.png>)
 
 Once you've created pull requests from your stack, Graphite will display the links to view them on the Graphite web dashboard:
