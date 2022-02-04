@@ -14,6 +14,8 @@ Everything is still a little early, so please add comments if you have any quest
 
 {% embed url="https://youtu.be/pP0AYz9ttC0" %}
 
+Graphite is designed to be used at work - unfortunately we don't yet support submitting PRs to open-source repos as an external contributor (i.e. without write access) due to limitations of GitHub.
+
 ## What can you do with Graphite?
 
 With Graphite, you can:
