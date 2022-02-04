@@ -129,7 +129,7 @@ Whenever you push a stack of PRs to GitHub, Graphite automatically adds a commen
 
 ![](<../.gitbook/assets/Screen Shot 2021-09-21 at 10.35.14 AM.png>)
 
-Once all the PRs in your stack have been approved, you can merge them all into trunk (see [Landing a stack of branches](https://www.notion.so/Graphite-user-guide-66300dcb2d29453fb1d6ea013a8d4859) for more on this).
+Once all the PRs in your stack have been approved, you can merge them all into trunk (see [Landing a stack](../guides/graphite-cli/landing-a-stack.md) for more on this).
 
 ![](<../.gitbook/assets/09 merge stack.png>)
 
