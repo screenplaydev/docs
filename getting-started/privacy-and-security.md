@@ -80,8 +80,6 @@ The Graphite GitHub App asks for the following permissions:
   * Used to create and display PRs on Graphite
 * `Read: user emails`
   * Used to send transactional emails about Graphite
-* `Read & write: user profiles`
-  * Used to show user profiles on Graphite - note that Graphite does not use the `write` permission, but GitHub does not allow us to request just the `read` permission here when using a GitHub App
 
 {% hint style="info" %}
 Note that depending on your GitHub org's settings, you may have to "request to add" the Graphite GitHub App - one of your GitHub org admins will then have to approve the app for use, at which point you'll be able to sign into Graphite.
