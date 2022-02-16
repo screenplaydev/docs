@@ -27,6 +27,7 @@
   * [Command shortcuts](guides/graphite-cli/command-shortcuts.md)
   * [Mixing gt and git](guides/graphite-cli/mixing-gt-and-git.md)
   * [CLI command reference](guides/graphite-cli/cli-command-reference.md)
+  * [Modifying a stack](guides/graphite-cli/modifying-a-stack.md)
 * [Graphite dashboard](guides/graphite-dashboard/README.md)
   * [Getting started with the dashboard](guides/graphite-dashboard/getting-started-with-the-dashboard.md)
   * [Using your PR inboxes](guides/graphite-dashboard/using-the-review-queue.md)
