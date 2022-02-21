@@ -111,15 +111,11 @@ If you're not sure whether `Merge all (n)` will work with your team's merge proc
 
 We find that merging with the Graphite UI saves our engineers - and the engineers that have used it - a substantial amount of time. Anecdotally, we've a number of stories from our users about how they used to block out "half days" just to merge their stacks before using the Graphite UI.
 
-However, if you'd like to manually usher your PRs out the door, we recommend always merging from the bottom of the stack; while there are other techniques, we've found that this is the most intuitive and safe model for our users.
+However, if you'd like to manually usher your PRs out the door, you can find a set of instructions on how to merge a stack using our Graphite CLI [here](https://docs.graphite.dev/guides/graphite-cli/landing-a-stack).
 
-To merge from the bottom of the stack:
-* Merge the bottom-most PR in the stack.
-* Run `gt repo sync` locally to rebase the upstack PRs, automatically slicing off the already-merged commits to avoid GitHub merge conflicts.
-* Run `gt stack submit` to re-submit the rebased PRs.
-* After CI has finished running, repeat the process with the new stack base.
+{% hint style="warning" %}
+Note that we recommend always merging from the bottom of the stack; while there are other techniques, we've found that this is the most intuitive and safe model for our users.
 
-{% hint style="info %}
 Merging in reverse order from the middle or top of the stack, collapsing all of the PRs into one, is the fastest way to merge an entire stack, but in our experience, there are a number of pitfalls for users - namely around syncing this merged state locally (to continue developing on any upstack PRs) or undoing these changes if a user decides not to merge a PR - that can lead to perilous situations where users have felt like they've lost code or can't re-create their previous state.
 
 While certainly not impossible, it's also harder to re-derive the original stack of PRs when looking at the git history.
