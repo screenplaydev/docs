@@ -1,13 +1,13 @@
-# Installing without Homebrew (i.e. on Linux)
+# Installing from source (i.e. on Linux)
 
-To install the Graphite CLI without Homebrew (on Linux for example), you will need to clone the repo and build and install the tool yourself.
+Some users may want to clone and install the graphite-cli from source.
 
 You'll need git, the latest version of Node.js for your platform and NPM.
 
 Clone & build the Graphite CLI:
 
 ```bash
-git clone https://github.com/screenplaydev/graphite-cli
+git clone https://github.com/withgraphite/graphite-cli
 cd graphite-cli
 yarn install
 yarn build
