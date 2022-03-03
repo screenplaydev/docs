@@ -129,7 +129,7 @@ Whenever you push a stack of PRs to GitHub, Graphite automatically adds a commen
 
 ![](<../.gitbook/assets/Screen Shot 2021-09-21 at 10.35.14 AM.png>)
 
-Once all the PRs in your stack have been approved, you can merge them all into trunk (see [Landing a stack](../guides/graphite-cli/merging-a-stack.md) for more on this).
+Once all the PRs in your stack have been approved, you can merge them all into trunk by having [Graphite do the work for you](../guides/graphite-dashboard/merging-your-pull-requests.md#merging-a-stack-of-prs) (recommended) or by replicating those steps yourself [manually](../guides/graphite-cli/merging-a-stack.md).
 
 ![](<../.gitbook/assets/09 merge stack.png>)
 
