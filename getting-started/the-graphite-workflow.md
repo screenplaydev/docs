@@ -33,7 +33,7 @@ gt branch create -a feat-stories-API -m "Stories - API [1/3]"
 ```
 
 {% hint style="info" %}
-Note that if you don't pass in a branch name, `gt branch create` will auto-generate a branch name from your commit message.  You can configure a prefix for `gt branch create` to add to all of your auto-generated branch names using `gt user branch-prefix` - see the [**CLI command reference**](../guides/graphite-cli/cli-command-reference.md#user) for more details.
+Note that if you don't pass in a branch name, `gt branch create` will auto-generate a branch name from your commit message. You can configure a prefix for `gt branch create` to add to all of your auto-generated branch names using `gt user branch-prefix` - see the [**CLI command reference**](../guides/graphite-cli/cli-command-reference.md#user) for more details.
 {% endhint %}
 
 ![](<../.gitbook/assets/01 new branch.png>)
@@ -123,13 +123,13 @@ gt stack submit
 gt log
 ```
 
-![](<../.gitbook/assets/08 stack approved (2).png>)
+![](<../.gitbook/assets/08 stack approved (1).png>)
 
 Whenever you push a stack of PRs to GitHub, Graphite automatically adds a comment to every PR in the stack to help your reviewers navigate between them:
 
 ![](<../.gitbook/assets/Screen Shot 2021-09-21 at 10.35.14 AM.png>)
 
-Once all the PRs in your stack have been approved, you can merge them all into trunk (see [Landing a stack](../guides/graphite-cli/landing-a-stack.md) for more on this).
+Once all the PRs in your stack have been approved, you can merge them all into trunk (see [Landing a stack](../guides/graphite-cli/merging-a-stack.md) for more on this).
 
 ![](<../.gitbook/assets/09 merge stack.png>)
 
