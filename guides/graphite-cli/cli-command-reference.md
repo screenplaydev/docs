@@ -171,6 +171,10 @@ All `gt downstack` commands can also be accessed by the shortcut `gt ds`.
 
 * These commands are equivalent to `gt stack` counterparts (with the same options), but operate only on the downstack (inclusive) branches in the stack.
 
+**`gt downstack edit`**
+
+* Edit the order of branches in a stack, and resolve any merge conflicts that arise when doing so.
+
 ## `upstack`
 
 Upstack commands operate on the current branch and all of its recursive descendant branches in the stack.
@@ -327,6 +331,15 @@ All `gt log` commands can also be accessed by the shortcut `gt l`.
     * Enable tips.
   * `--disable`
     * Disable tips.
+
+**`gt user editor`**
+
+* Print the text editor to use with Graphite when writing PR descriptions.
+* Options:
+  * `--set <editor>`
+    * Set your preferred editor, i.e. `gt user editor --set vim`.
+  * `--unset`
+    * Unset the default editor for Graphite.
 
 ## `feedback`
 

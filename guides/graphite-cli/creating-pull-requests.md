@@ -25,7 +25,7 @@ gt stack submit
 ![Edit the PR body](<../../.gitbook/assets/Screen Shot 2021-10-14 at 4.51.37 PM.png>)
 
 {% hint style="warning" %}
-Graphite selects the text editor for the PR body based on your shell's `$EDITOR` variable.  If you'd like to use a different text editor (i.e. `vim`), make sure to set make sure to set `EDITOR=vim` in your shell before running `gt stack submit`.
+You can configure which text editor to use with Graphite for the PR body by running the command `gt user editor --set <editor>`(i.e. `gt user editor --set vim`).
 {% endhint %}
 
 {% hint style="info" %}
@@ -41,7 +41,5 @@ Once you've created pull requests from your stack, Graphite will display the lin
 ![](<../../.gitbook/assets/Screen Shot 2021-10-14 at 4.52.31 PM.png>)
 
 When running submit for the first time on a stack, or a successive time to push updates, you can use the `--draft/--no-draft` boolean flag to toggle the draft status of PRs in your stack. For example, you might open your PRs initially in draft mode, and then later run `gt stack submit --`no-`draft` to change all PRs in your stack to "ready for review."
-
-
 
 Now that you can create pull requests from your stack, you can sync your local repo with remote and keep your stacks up-to-date.
