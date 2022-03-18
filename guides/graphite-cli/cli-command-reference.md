@@ -44,6 +44,12 @@ At a glance, we find that the most commonly useful commands for users to know ar
 Where possible, prefer using `commit` commands to using their underlying git equivalents. Graphite's `commit` commands utilize Graphite's understanding of our stack to fix your stack after the commit creation/amend, minimizing merge conflicts.
 {% endhint %}
 
+{% hint style="info" %}
+All `gt commit` commands can also be accessed by the shortcut `gt c`.
+
+A select subset of commands also have combined shortcuts, e.g. `gt commit create` as `gt cc`, noted below.
+{% endhint %}
+
 **`gt commit create` \*\* or \*\* `gt cc`**
 
 Create a new commit and fix the upstack branches.

@@ -25,7 +25,7 @@ gt branch checkout main
 # * build Stories API *
 
 # create a new branch off of main with your changes and add a commit in a single line:
-gt add -A # add all unstaged change (same syntax as git add)
+gt add -A # add all unstaged change (same syntax as git add - note that this command will pass through to native git)
 gt branch create feat-stories-API -m "Stories - API [1/3]"
 
 # alternatively, you could do this with a single line:
@@ -41,7 +41,7 @@ Note that if you don't pass in a branch name, `gt branch create` will auto-gener
 Note that unlike a standard git workflow - where you create a new branch before working on your feature - with `gt` you do the following:
 
 1. Start by building your feature on an existing branch
-2. Add your unstaged changes with `gt add`
+2. Add your unstaged changes with `gt add` (note that this will pass through to native git)
 3. Create a new branch and commit simultaneously with `gt branch create -m "{your commit message}"`
 
 Graphite keeps track of the parent branch so that it can always fix your stacks if something changes underneath.
