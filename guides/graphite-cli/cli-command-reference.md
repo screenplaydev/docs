@@ -101,8 +101,8 @@ A select subset of commands also have combined shortcuts, e.g. `gt branch checko
   * `--branch <name>`
     * Check out the specified branch instead, i.e. `gt branch checkout main`.
 
-**`gt branch next` \*\* or \*\* `gt bn`**\
-**`gt branch prev` \*\* or \*\* `gt bp`**
+**`gt branch up` \*\* or \*\* `gt bu`**\
+**`gt branch down` \*\* or \*\* `gt bd`**
 
 * Traverse upstack/downstack by one branch.
 * Options
@@ -123,6 +123,14 @@ A select subset of commands also have combined shortcuts, e.g. `gt branch checko
 **`gt branch submit`**
 
 * create PR / force push current branch
+
+**`gt branch delete`**
+
+* Delete a branch by name, by passing through to `git branch -d`
+* Options
+  * `-D`
+    * Force delete the branch (i.e., `git branch -D`)
+
 
 ## `stack`
 
