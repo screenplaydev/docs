@@ -35,20 +35,20 @@ Sometimes you want to move to the branch directly above or below the current bra
 
 ```bash
 # check out the branch directly up-stack (in this case review_queue_frontend)
-gt branch next
+gt branch up
 
 # check out the branch directly down-stack (in this case back to review_queue_server)
-gt branch prev
+gt branch down
 
 # move multiple branches at a time (back to main)
-gt branch prev 2
+gt branch down 2
 
 # move multiple branches at a time (back to review_queue_frontend)
-gt branch next 4
+gt branch up 4
 ```
 
 {% hint style="info" %}
-If you find yourself navigating a stack which splits into smaller stacks, `gt branch next` will ask you which child branch you'd like to checkout if there's ever ambiguity.
+If you find yourself navigating a stack which splits into smaller stacks, `gt branch up` will ask you which child branch you'd like to checkout if there's ever ambiguity.
 {% endhint %}
 
 Now that you can quickly navigate your stack, let's take a look at how you can easily update branches mid-stack.
