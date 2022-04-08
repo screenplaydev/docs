@@ -19,8 +19,10 @@ gt ll # gt log long
 
 ## navigating a stack
 gt bco # gt branch checkout
-gt bn # gt branch next
-gt bp # gt branch prev
+gt bu # gt branch up
+gt bd # gt branch down
+gt bt # gt branch top
+gt bb # gt branch bottom
 
 ## creating a pull request
 gt ss # gt stack submit
