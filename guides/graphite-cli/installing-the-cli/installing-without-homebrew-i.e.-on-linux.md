@@ -9,6 +9,7 @@ Clone & build the Graphite CLI:
 ```bash
 git clone https://github.com/withgraphite/graphite-cli
 cd graphite-cli
+# git checkout release--v0.17.8 (we recommend building from the latest version, but this step is optional!)
 yarn install
 yarn build
 ```
