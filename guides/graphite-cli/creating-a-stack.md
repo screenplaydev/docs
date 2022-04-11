@@ -46,3 +46,6 @@ gt branch create -a -m "part 3"
 ```
 
 Now that you've created a stack, you can use Graphite's CLI to easily visualize it in your terminal.
+
+### Creating a branch without staged changes
+Graphite supports creating your branch before starting to code!  In order for the CLI metadata to correctly track branch dependencies, if you create a branch without staged changes, Graphite will create an empty commit on the branch, which you are free to either amend or commit on top of with the [**commit-level commands**](updating-a-mid-stack-branch.md).
