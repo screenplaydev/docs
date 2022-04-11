@@ -41,8 +41,8 @@ gt auth --token <auth_token>
 
 You can install Graphite from source by following the below instructions.  Note that there may be occasional bugs on trunk — please check out a release branch!
 
-{% content-ref url="installing-without-homebrew-i.e.-on-linux.md" %}
-[installing-without-homebrew-i.e.-on-linux.md](installing-without-homebrew-i.e.-on-linux.md)
+{% content-ref url="installing-from-source.md" %}
+[installing-from-source.md](installing-from-source.md)
 {% endcontent-ref %}
 
 Once you've set up the CLI, it's time to authenticate with your GitHub account via the Graphite dashboard.
