@@ -1,4 +1,4 @@
-# Installing from source (i.e. on Linux)
+# Installing from source
 
 Some users may want to clone and install the graphite-cli from source.
 
