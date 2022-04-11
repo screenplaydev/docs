@@ -39,7 +39,7 @@ gt auth --token <auth_token>
 
 
 
-If you can't install Graphite via Homebrew (i.e. you develop on Linux), you can still use Graphite by following these steps:
+You can install Graphite from source by following the below instructions.  Note that there may be occasional bugs on trunk — please check out a release branch!
 
 {% content-ref url="installing-without-homebrew-i.e.-on-linux.md" %}
 [installing-without-homebrew-i.e.-on-linux.md](installing-without-homebrew-i.e.-on-linux.md)
