@@ -8,7 +8,7 @@ As a result, we strongly recommend merging via the Graphite UI over merging via 
 If you haven't yet tried it, check out the instructions [here](https://docs.graphite.dev/guides/graphite-dashboard/merging-your-pull-requests#merging-a-stack-of-prs).
 {% endhint %}
 
-To merge a stack using the Graphite CLI, either use the Merge X... button in the [Graphite dashboard](https://app.graphite.dev), or merge the PRs in the stack one at a time:
+To merge a stack using the Graphite CLI, either use the Merge... button in the [Graphite dashboard](https://app.graphite.dev), or merge the PRs in the stack one at a time:
 
 1. Merge the PR at the bottom of the stack into `main` on the [Graphite dashboard](https://app.graphite.dev) (or via GitHub).
 2. Run `gt repo sync`.
