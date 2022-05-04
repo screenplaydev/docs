@@ -1,10 +1,18 @@
 # Modifying a stack
 
-With the Graphite CLI, you can easily adjust an existing stack.
+With the Graphite CLI, you can easily modify the dependencies of your branches.
+
+### `gt upstack onto`
+
+You can use `gt upstack onto` to rebase a branch and all of its recursive children onto a branch of your choice.
+
+* Checkout the branch that you'd like to rebase.
+* Run `gt upstack onto` to open an interactive prompt that allows you to select the new parent of the branch.
+* You can also specify the branch yourself with `gt upstack onto new_parent`
 
 ### `gt downstack edit`
 
-If you've created a stack of several branches, you can change the order of the stacked branches by using the command `gt downstack edit`.&#x20;
+If you've created a stack of several branches, you can change the order of the stacked branches by using the command `gt downstack edit`.
 
 * Checkout the top of the stack you'd like to edit.
 * Run `gt downstack edit` to open an interactive editor which shows each branch in the stack as a line.
