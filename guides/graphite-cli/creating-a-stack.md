@@ -39,7 +39,7 @@ Because you didn't pass in a branch name in the above example, `gt branch create
 # create a new branch on your stack
 gt branch create -a -m "part 2"
 
-# * build feature part 2 *
+# * build feature part 3 *
 
 # create another new branch on your stack
 gt branch create -a -m "part 3"
@@ -47,5 +47,33 @@ gt branch create -a -m "part 3"
 
 Now that you've created a stack, you can use Graphite's CLI to easily visualize it in your terminal.
 
+```
+gt log
+
+◉ jg--05-04-part_3 (current)
+│ 4 seconds ago
+│ * fa0808 - part 3
+│
+◯ jg--05-04-part_2
+│ 27 seconds ago
+│ * d4f750 - part 2
+│
+◯ jg--05-04-part_1
+│ 32 seconds ago
+│ * 358084 - part 1
+│
+◯ main
+│ 9 days ago
+│
+```
+
 ### Creating a branch without staged changes
 Graphite supports creating your branch before starting to code!  In order for Graphite's branch metadata to correctly track dependencies, Graphite will create an empty commit if you create a branch without staged changes, which you are free to either amend or commit on top of with the [**commit-level commands**](updating-a-mid-stack-branch.md).  If you prefer not to amend commits, you can avoid an empty commit in your history with squash-and-merge.
+
+
+### Branch naming
+By default, Graphite will concatenate an optional user prefix, the date, and the commit message to create a branch name that is unlikely to conflict with other branches in your repository.  The prefix can be changed with `gt user branch-prefix`.  For example, in the branch names from the above example, the user's prefix was set to `jg--` with `gt user branch-prefix --set jg--`.  You can also pass a custom name `gt branch create` as a positional argument, e.g.:
+
+```
+gt branch create my-branch-for-part-1 -a -m "part 1"
+```
