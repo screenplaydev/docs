@@ -1,4 +1,4 @@
-# Merging a Stack
+# Merging a stack
 
 {% hint style="warning" %}
 We find that merging with the Graphite UI saves our engineers - and the engineers that have used it - a substantial amount of time by automating the process of waiting for CI, merging, and rebasing. Anecdotally, we've a number of stories from our users about how they used to block out "half days" just to merge their stacks before using the Graphite UI.
