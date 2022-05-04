@@ -72,7 +72,7 @@ Graphite supports creating your branch before starting to code!  In order for Gr
 
 
 ### Branch naming
-By default, Graphite will concatenate an optional user prefix, the date, and the commit message to create a branch name that is unlikely to conflict with other branches in your repository.  The prefix can be changed with `gt user branch-prefix`.  For example, in the branch names from the above example, the user's prefix was set to `jg--` with `gt user branch-prefix --set jg--`.  You can also pass a custom name `gt branch create` as a positional argument, e.g.:
+By default, Graphite will concatenate an optional user prefix, the date, and the commit message to create a branch name that is unlikely to conflict with other branches in your repository.  The prefix can be changed with `gt user branch-prefix`.  For example, in the branch names from the above example, the user's prefix was set to `jg--` with `gt user branch-prefix --set jg--`.  You can also pass a custom name `gt branch create` as a positional argument:
 
 ```
 gt branch create my-branch-for-part-1 -a -m "part 1"
