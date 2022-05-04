@@ -10,7 +10,7 @@ Graphite's CLI **** gives you 3 different ways to visualize your current stack.
 
 ### `gt log short` (compact view)
 
-![](<../../.gitbook/assets/Screen Shot 2021-10-14 at 11.53.47 AM.png>)
+![](<../../.gitbook/assets/Screen Shot 2022-05-04 at 11.19.35.png>)
 
 ### `gt log long` (detailed view)
 
