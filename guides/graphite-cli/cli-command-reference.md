@@ -72,6 +72,7 @@ Create a new commit and fix the upstack branches.
   * `-m <message>`\
     `--message <message>`
     * The updated for the new commit.
+  * `-n`
   * `--no-edit`
     * Don't modify the existing commit message.
 
@@ -124,13 +125,35 @@ A select subset of commands also have combined shortcuts, e.g. `gt branch checko
 
 * create PR / force push current branch
 
+**`gt branch rename`**
+
+* Rename a branch and update its children's metadata.
+
 **`gt branch delete`**
 
 * Delete a branch by name, by passing through to `git branch -d`
+* If the current branch is deleted, its parent will be checked out.
 * Options
-  * `-D`
+  * `-`f\
+    `--force`
     * Force delete the branch (i.e., `git branch -D`)
 
+**`gt branch edit`**
+
+* Run a native `git rebase --interactive` over the commits on the current branch.
+* This command is intended for advanced Git users who want to make use of the commit structure within a branch while working with Graphite.
+
+**`gt branch show`**
+
+* Run a native `git log` over the commits on the current branch.
+* Options
+  * `-p`\
+    `--patch`
+    * Show diffs (i.e., `git log -p`)
+
+**`gt branch pr-info`**
+
+* Fetch and display GitHub PR information for the current branch.
 
 ## `stack`
 
@@ -188,6 +211,10 @@ All `gt downstack` commands can also be accessed by the shortcut `gt ds`.
 **`gt downstack edit`**
 
 * Edit the order of branches in a stack, and resolve any merge conflicts that arise when doing so.
+
+**`gt downstack sync`**
+
+* Sync a branch and its downstack from remote.
 
 ## `upstack`
 
@@ -305,6 +332,13 @@ All `gt repo` commands can also be accessed by the shortcut `gt r`.
   * `--set <trunk>`
     * Add a manual override to Graphite's inferred repo trunk.
 
+**`gt repo remote`**
+
+* Print Graphite's understanding of the current repo remote. e.g. 'origin'
+* Options:
+  * `--set <origin>`
+    * Add a manual override to Graphite's inferred remote.
+
 **`gt repo pr-templates`**
 
 * Lists Graphite's view of the repo's GitHub PR templates. These PR templates are in turn used to pre-populate the body content of a PR when a user runs a gt submit command.
@@ -345,6 +379,15 @@ All `gt log` commands can also be accessed by the shortcut `gt l`.
     * Enable tips.
   * `--disable`
     * Disable tips.
+
+**`gt user experimental`**
+
+* Print whether experimental Graphite features are enabled.
+* Options:
+  * `--enable`
+    * Enable experimental features.
+  * `--disable`
+    * Disable experimental features.
 
 **`gt user editor`**
 
