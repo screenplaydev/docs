@@ -22,7 +22,7 @@ To enter Focus Mode and hide the right side tray altogether, just click the ⏭ 
 You can quickly toggle Focus Mode (show/hide the right-side tray) on the PR page with the keyboard shortcut `F`, show the timeline with `Shift + C`, and show the file tree with `Shift + F`.
 {% endhint %}
 
-![Easily show/hide the timeline & file tree as you're reviewing PRs](<../../.gitbook/assets/timeline\_and\_file\_tree\_100 (1).gif>)
+![Easily show/hide the timeline & file tree as you're reviewing PRs](../../.gitbook/assets/timeline\_and\_file\_tree\_100.gif)
 
 ## Adding comments
 
@@ -70,4 +70,4 @@ Lastly, you can upload your own GIFs & memes to your team's meme library:
 
 Graphite makes it easy to review large stacks of PRs at once. From your PR inbox, just click into a pull request to see the PR details, code changes, and comments. You can always see where the current PR sits and navigate to any of the other PRs in a stack with the "Show stack" button, or by using the keyboard shortcut `S`. Starting from the bottom of the stack, just add your comments, choose your review outcome, and move on to the next PR in the stack!
 
-![Use the stack visualization modal to quickly navigate between PRs in a stack as you review](../../.gitbook/assets/review\_stacks\_100.gif)
+![Use the stack visualization modal to quickly navigate between PRs in a stack as you review](<../../.gitbook/assets/review\_stacks\_100 (1).gif>)

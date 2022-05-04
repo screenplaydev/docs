@@ -4,4 +4,4 @@ description: To install a personal access token, please add the following permis
 
 # PAT permissions
 
-![](../.gitbook/assets/Github-PAT-permissions-light.png)
+![](<../.gitbook/assets/Github-PAT-permissions-light (1).png>)
