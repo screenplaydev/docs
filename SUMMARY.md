@@ -25,6 +25,7 @@
   * [Creating pull requests](guides/graphite-cli/creating-pull-requests.md)
   * [Syncing with remote](guides/graphite-cli/syncing-and-resolving-conflicts.md)
   * [Merging a Stack](guides/graphite-cli/merging-a-stack.md)
+  * [Collaborating on a stack (experimental)](guides/graphite-cli/collaborating-on-a-stack-experimental.md)
   * [Command shortcuts](guides/graphite-cli/command-shortcuts.md)
   * [Mixing gt and git](guides/graphite-cli/mixing-gt-and-git.md)
   * [CLI command reference](guides/graphite-cli/cli-command-reference.md)
