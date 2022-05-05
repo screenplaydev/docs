@@ -14,7 +14,6 @@
 * [Graphite CLI](guides/graphite-cli/README.md)
   * [Installing the CLI](guides/graphite-cli/installing-the-cli/README.md)
     * [Installing from source](guides/graphite-cli/installing-the-cli/installing-from-source-i.e.-on-linux.md)
-    * [Copy of Installing from source](guides/graphite-cli/installing-the-cli/installing-from-source-i.e.-on-linux-1.md)
     * [Installing on Windows (via WSL)](guides/graphite-cli/installing-the-cli/installing-on-windows-via-wsl.md)
   * [Authenticating the CLI](guides/graphite-cli/authenticating-the-cli/README.md)
     * [Using a GitHub Personal Access Token](guides/graphite-cli/authenticating-the-cli/using-a-github-personal-access-token.md)
