@@ -43,3 +43,4 @@ Plenty of folks smarter than us have written extensively bout the benefits of st
 * [Stacked Diffs: Keeping Phabricator Diffs Small](https://kurtisnusbaum.medium.com/stacked-diffs-keeping-phabricator-diffs-small-d9964f4dcfa6)
 * [Problems with Pull Requests and How to Fix Them](https://gregoryszorc.com/blog/2020/01/07/problems-with-pull-requests-and-how-to-fix-them/)
 * [Modern Code Review: A Case Study at Google](https://sback.it/publications/icse2018seip.pdf)
+* [Real world stack example as a twitter thread](https://twitter.com/benschac/status/1522214962357096448)
