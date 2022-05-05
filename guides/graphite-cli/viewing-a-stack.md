@@ -1,7 +1,7 @@
 # Viewing a stack
 
 {% hint style="info" %}
-Graphite's CLI **** gives you 3 different ways to visualize your current stack.
+Graphite's CLI \*\*\*\* gives you 3 different ways to visualize your current stack.
 {% endhint %}
 
 ### `gt log` (most common)
@@ -10,7 +10,7 @@ Graphite's CLI **** gives you 3 different ways to visualize your current stack.
 
 ### `gt log short` (compact view)
 
-![](<../../.gitbook/assets/Screen Shot 2022-05-04 at 11.19.35.png>)
+![](<../../.gitbook/assets/Screen Shot 2022-05-04 at 11.19.35 (1).png>)
 
 ### `gt log long` (detailed view)
 
