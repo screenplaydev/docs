@@ -1,8 +1,16 @@
 # Installing the CLI
 
-Install the Graphite CLI using either Homebrew ([https://brew.sh/](https://brew.sh)) or npm:
+Install the Graphite CLI using either [npm](https://www.npmjs.com) or [homebrew](https://www.brew.sh):
 
-#### **Homebrew installation**
+#### **npm installation**&#x20;
+
+```bash
+# Install Graphite from npm.
+npm install -g @withgraphite/graphite-cli
+gt --version
+```
+
+#### **brew installation (on MacOS)**
 
 ```bash
 # Install Graphite from Homebrew.
@@ -10,13 +18,7 @@ brew install withgraphite/tap/graphite
 gt --version
 ```
 
-#### **npm installation**
-
-```bash
-# Install Graphite from npm.
-npm install -g @withgraphite/graphite-cli
-gt --version
-```
+#### ****
 
 #### \*\*\*\*
 
