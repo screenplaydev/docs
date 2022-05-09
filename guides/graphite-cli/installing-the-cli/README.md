@@ -18,11 +18,7 @@ brew install withgraphite/tap/graphite
 gt --version
 ```
 
-#### ****
-
-#### \*\*\*\*
-
-#### **Initialization**
+### **Initialization**
 
 Graphite stores a small JSON configuration file in `.git/.graphite_repo_config` of your repositiory. On first execution, the CLI will prompt you to provide a minimal amount of info to populate this config.
 
