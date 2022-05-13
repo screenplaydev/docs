@@ -2,11 +2,14 @@
 
 ## Install the CLI
 
-Install the Graphite CLI using Homebrew ([https://brew.sh/](https://brew.sh))
+Install the Graphite CLI using npm ([https://www.npmjs.com/](https://www.npmjs.com/)) or Homebrew ([https://brew.sh/](https://brew.sh))
 
 ```bash
-# Install Graphite from Homebrew.
-brew install screenplaydev/tap/graphite
+# Install Graphite from NPM.
+npm install -g @withgraphite/graphite-cli
+
+# Or, install Graphite from Homebrew (MacOS)
+brew install withgraphite/tap/graphite
 
 # Initialize Graphite.
 cd ~/my-project
@@ -31,7 +34,7 @@ gt auth --token <auth_token>
 
 ## Join the Graphite Community
 
-By using Graphite, you're joining a community of engineers at top companies around the world who have found stacked changes make them more effective at what they do.  Our Graphite Community Slack group is the best place to get support, suggest features, stay up-to-date with our latest releases, and interact with other Graphite beta users and the core team:
+By using Graphite, you're joining a community of engineers at top companies around the world who have found stacked changes make them more effective at what they do. Our Graphite Community Slack group is the best place to get support, suggest features, stay up-to-date with our latest releases, and interact with other Graphite beta users and the core team:
 
 {% embed url="https://join.slack.com/t/graphite-community/shared_invite/zt-v828g9dz-TIRvlutxTCqgZmxnsO9Knw" %}
 
