@@ -1,14 +1,14 @@
 # Privacy & security
 
 {% hint style="info" %}
-Authenticating a new tool with your GitHub account can be scary, so we wanted to be completely transparent about how we integrate with GitHub and make sure your source code is secure.  If you want to limit the repos Graphite can access, you can sign in using our GitHub App (see below).
+Authenticating a new tool with your GitHub account can be scary, so we wanted to be completely transparent about how we integrate with GitHub and make sure your source code is secure. If you want to limit the repos Graphite can access, you can sign in using our GitHub App (see below).
 {% endhint %}
 
 ## What permissions does Graphite need from GitHub?
 
 ### Permissions Graphite asks for (and why):
 
-![When you sign into the Graphite dashboard for the first time with GitHub, we ask for these permissions](<../.gitbook/assets/Screen Shot 2021-11-23 at 3.32.18 PM.png>)
+![When you sign into the Graphite dashboard for the first time with GitHub, we ask for these permissions](<../../.gitbook/assets/Screen Shot 2021-11-23 at 3.32.18 PM.png>)
 
 #### Here's what each of these permissions is used for:
 
@@ -51,7 +51,7 @@ To use a Personal Access Token with Graphite:
 
 1. [Generate a new token](https://github.com/settings/tokens/new) from on Github and add the following access scopes:
    * `repo` all scopes
-   * Under `admin:org`&#x20;
+   * Under `admin:org`
      * `read:org`
    * Under `user`
      * `read:user`
@@ -68,9 +68,9 @@ If this still doesn't resolve your issue, please ping us on Slack so we can trou
 
 ## Signing into Graphite with a GitHub App
 
-Lastly, if you'd prefer to limit Graphite's access to select repos, you can sign in using our GitHub App when you first create your Graphite account.  Here's what the GitHub App signup flow looks like:
+Lastly, if you'd prefer to limit Graphite's access to select repos, you can sign in using our GitHub App when you first create your Graphite account. Here's what the GitHub App signup flow looks like:
 
-![When you sign into Graphite using our GitHub App, you can choose which repos you allow Graphite to access](../.gitbook/assets/github\_app\_permissions.gif)
+![When you sign into Graphite using our GitHub App, you can choose which repos you allow Graphite to access](../../.gitbook/assets/github\_app\_permissions.gif)
 
 The Graphite GitHub App asks for the following permissions:
 

@@ -12,10 +12,10 @@ Authenticating the Graphite CLI is easy:
 
 Once you've authenticated the CLI, you should be able to run `gt stack submit` to create or update pull requests in GitHub for every branch in your stack.
 
-Your privacy & security are top priorities - Graphite is architected to ask for the minimum set of permissions necessary within the constraints of GitHub's API.  Learn more our GitHub integration here:
+Your privacy & security are top priorities - Graphite is architected to ask for the minimum set of permissions necessary within the constraints of GitHub's API. Learn more our GitHub integration here:
 
-{% content-ref url="../../../getting-started/privacy-and-security.md" %}
-[privacy-and-security.md](../../../getting-started/privacy-and-security.md)
+{% content-ref url="../../../getting-started/privacy-and-security/" %}
+[privacy-and-security](../../../getting-started/privacy-and-security/)
 {% endcontent-ref %}
 
 ## Troubleshooting
@@ -36,4 +36,3 @@ If you still want to use `gt stack submit`, you can add a [GitHub Personal Acces
 {% endcontent-ref %}
 
 Once you've added your Personal Access Token to the web dashboard, the Graphite CLI will automatically pick it up (you don't need to run `gt auth` again), and `gt stack submit` should work correctly.
-
