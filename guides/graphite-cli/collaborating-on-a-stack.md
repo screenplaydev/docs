@@ -20,3 +20,13 @@ This will sync all branches that `my_branch` depends on (starting from the botto
 Coming soon: Instead of overwriting local changes, rebase them onto the remote branch.
 
 We are still iterating on this feature, and would love to hear more on how we can add tooling around it to better support your workflow in the [#downstack-sync-preview](https://graphite-community.slack.com/archives/C03DZLX3MHQ) channel on our [community Slack server](https://join.slack.com/t/graphite-community/shared\_invite/zt-v828g9dz-TIRvlutxTCqgZmxnsO9Knw)!
+
+
+
+### Got coworkers that don't use Graphite yet?
+
+We strongly recommend that coworkers who wish to collaborate on a branch both use `gt` to ensure that the dependencies are managed and synced correctly as you work together.
+
+Only branches that your coworkers have submitted with `gt` can be synced down to your local, as we rely on the Graphite submission to keep track of the dependency tree.
+
+If you want to stack on top of your non-Graphite-using coworkers’ branches, the current recommendation would be to use `git pull`  and set its dependency with `gt us onto <trunk>`, although this flow will change slightly in the near future.
