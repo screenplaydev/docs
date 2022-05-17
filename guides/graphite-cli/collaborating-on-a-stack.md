@@ -15,13 +15,16 @@ Then, coworker B could pull the branch to their machine:
 gt downstack sync my_branch
 ```
 
-This will sync all branches that `my_branch` depends on (starting from the bottom of the stack).  If any of the branches already exist locally, Graphite will prompt you to confirm that you'd like to overwrite your local copy, and abort if you change your mind.\
+This will sync all branches that `my_branch` depends on (starting from the bottom of the stack).  If any of the branches already exist locally, Graphite will prompt you to confirm that you'd like to overwrite your local copy, and abort if you change your mind.
+
 \
 Coming soon: Instead of overwriting local changes, rebase them onto the remote branch.
 
 We are still iterating on this feature, and would love to hear more on how we can add tooling around it to better support your workflow in the [#downstack-sync-preview](https://graphite-community.slack.com/archives/C03DZLX3MHQ) channel on our [community Slack server](https://join.slack.com/t/graphite-community/shared\_invite/zt-v828g9dz-TIRvlutxTCqgZmxnsO9Knw)!
 
-
+{% hint style="success" %}
+`gt downstack sync` is also the recommended workflow for developers who work on more than one machine — submit draft PRs for your stack on one machine with `gt stack submit` and use then use `downstack sync` from the other device!
+{% endhint %}
 
 ### Got coworkers that don't use Graphite yet?
 
