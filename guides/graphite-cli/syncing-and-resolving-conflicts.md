@@ -6,7 +6,11 @@ Very often as you're building, the remote trunk branch will move ahead of your l
 
 ## Syncing your repo
 
-If your remote trunk branch (i.e. `origin/main`) gets ahead of your local repository while you're developing, you can use `gt repo sync` to bring your stack up-to-date.&#x20;
+{% hint style="warning" %}
+This section has gotten a little outdated — `gt repo sync` currently does not automatically rebase your branches — use `stack fix --rebase` to do this!  We will be adding this functionality back to `repo sync` very soon 😉
+{% endhint %}
+
+If your remote trunk branch (i.e. `origin/main`) gets ahead of your local repository while you're developing, you can use `gt repo sync` to bring your stack up-to-date.
 
 `gt repo sync` does 3 things:
 
@@ -22,7 +26,7 @@ If you want to automatically push any local branches which were rebased as a res
 Resolving rebase conflicts while running `gt repo sync` works just like it does for `gt commit create` or `gt commit amend`.
 {% endhint %}
 
-If `gt repo sync` encounters any conflicts as it recursively rebases your stacked branches, you'll be prompted to resolve your conflicts before continuing.  You can do this with the following workflow:
+If `gt repo sync` encounters any conflicts as it recursively rebases your stacked branches, you'll be prompted to resolve your conflicts before continuing. You can do this with the following workflow:
 
 ```bash
 # find which files have conflicts
