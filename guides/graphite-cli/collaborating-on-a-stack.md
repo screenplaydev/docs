@@ -1,6 +1,6 @@
 # Collaborating on a stack
 
-Version 0.18.3 introduces a new command, `gt downstack sync`, that allows you to pull your coworker's stacks from remote into your local repository.
+Version 0.18.4 introduces a new command, `gt downstack sync`, that allows you to pull your coworker's stacks from remote into your local repository.
 
 For example, coworker A could create and submit their branch:
 
