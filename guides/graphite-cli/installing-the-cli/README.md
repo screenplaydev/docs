@@ -18,9 +18,9 @@ brew install withgraphite/tap/graphite
 gt --version
 ```
 
-#### **Windows**
+### **Windows**
 
-If you'd like to use Graphite on Windows, we recommend working within Windows Subsystem for Linux.  Follow the [instructions here](https://docs.microsoft.com/en-us/windows/wsl/install) to set it up.
+If you'd like to use Graphite on Windows, we recommend working within Windows Subsystem for Linux.  Follow the [instructions here](https://docs.microsoft.com/en-us/windows/wsl/install) to set it up.  After setting up WSL, you can [set up nvm/node/npm](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl) and then install Graphite as normal!
 
 ### **Initialization**
 
