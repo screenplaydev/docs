@@ -29,6 +29,7 @@
   * [Command shortcuts](guides/graphite-cli/command-shortcuts.md)
   * [Shell completion](guides/graphite-cli/shell-completion.md)
   * [Mixing gt and git](guides/graphite-cli/mixing-gt-and-git.md)
+  * [Multiple checkout (experimental)](guides/graphite-cli/multiple-checkout-experimental.md)
   * [CLI command reference](guides/graphite-cli/cli-command-reference.md)
 * [Graphite dashboard](guides/graphite-dashboard/README.md)
   * [Getting started with the dashboard](guides/graphite-dashboard/getting-started-with-the-dashboard.md)
