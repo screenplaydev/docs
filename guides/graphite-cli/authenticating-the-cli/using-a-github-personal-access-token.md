@@ -12,7 +12,7 @@ To use a Personal Access Token with Graphite:
    * `read:user`
    * `user:email`
 2. \[If your org has SSO] Check the [token settings page on GitHub](https://github.com/settings/tokens) and make sure you enable SSO for the Personal Access Token you're using with Graphite.
-3. Next, add your new token to Graphite via the [Graphite web dashboard settings page](https://app.graphite.dev/settings).
+3. Next, add your new token to Graphite via the [Graphite web dashboard settings page](https://app.graphite.dev/settings/github-access).
 
 ![Here's what your GitHub Personal Access Token settings page should look like when properly set up to use with Graphite](<../../../.gitbook/assets/Screen Shot 2022-01-16 at 6.26.21 PM.png>)
 
