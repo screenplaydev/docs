@@ -1,7 +1,7 @@
 # Updating a mid-stack branch
 
 {% hint style="info" %}
-Stacked changes aren't just about adding more branches on top - sometimes you want to go back and change something mid-stack.  Graphite makes it easy to update a mid-stack branch, and automatically rebases the changes you have stacked on top.
+Stacked changes aren't just about adding more branches on top - sometimes you want to go back and change something mid-stack. Graphite makes it easy to update a mid-stack branch, and automatically rebases the changes you have stacked on top.
 {% endhint %}
 
 ## Adding commits
@@ -11,7 +11,7 @@ Let's say you receive some comments in code review that you want to address with
 ```bash
 # address review comments with a new commit
 gt branch checkout my_stack_level_1
-gt commit create -a -m "my fourth commit" # -> automatically rebases both upstack branches
+gt commit create -a -m "my fourth commit" # -> automatically restacks both upstack branches
 ```
 
 ![Graphite will automatically perform the recursive rebases if you have up-stack changes when you run gt commit create on a mid-stack branch.](../../.gitbook/assets/Untitled.png)
@@ -23,12 +23,12 @@ If you prefer to just amend a previous commit, this is just as easy with `gt`:
 ```bash
 # address review comments by amending a commit
 gt branch checkout my_stack_level_1
-gt commit amend -a -m "my updated commit" # -> automatically rebases both upstack branches
+gt commit amend -a -m "my updated commit" # -> automatically restacks both upstack branches
 ```
 
 ## Resolving rebase conflicts
 
-If `gt commit create` or `gt commit amend` encounter any conflicts as they recursively rebase your stacked branches, you'll be prompted to resolve your conflicts before continuing.  You can do this with the following workflow:
+If `gt commit create` or `gt commit amend` encounter any conflicts as they recursively rebase your stacked branches, you'll be prompted to resolve your conflicts before continuing. You can do this with the following workflow:
 
 ```
 # find which files have conflicts
@@ -43,7 +43,7 @@ gt add -A
 gt continue
 ```
 
-Here's a video walkthrough of what this looks like:
+Here's a (somewhat out of date) video walkthrough of what this looks like:
 
 {% embed url="https://youtu.be/-KfI3aRaoSE" %}
 
