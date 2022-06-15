@@ -28,7 +28,7 @@ In fact, `gt log long` is just an alias for:
 
 But we like the way it looks!
 
-### Options for \`log\` and \`log short\`
+### Options for `log` and `log short`
 
 `log` and `log short` both support the following options.  Since `log long` is just a shortcut for a git command it doesn't have any customizability in Graphite at the moment.
 
