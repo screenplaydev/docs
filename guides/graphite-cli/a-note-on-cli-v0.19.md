@@ -4,7 +4,7 @@ If you’re curious to learn more about the changes in this new version of the C
 
 _This page was written to explain the changes to long-standing users of the CLI who are at least a little curious about how Graphite works under the hood — the rest of the documentation has been updated as well._
 
-#### Moving away from the “default-tracked” model
+### Moving away from the “default-tracked” model
 
 _Historically, the Graphite CLI would by default assume that all branches other than trunk and ignored branches were fair game. This version of the CLI turns this assumption around._
 
@@ -12,7 +12,7 @@ Instead of an ignore list, the new engine requires branches to be explicitly all
 
 The new `repo init` flow walks you through the process of tracking some of your existing local branches when you start using the CLI in a repository.
 
-#### Simplifying restacking
+### Simplifying restacking
 
 _At their core, most of our local commands perform some operation on your branch or stack, and then automatically rebase each branch in the stack on top of the new version of its parent. We wanted to be clearer about when this is happening and what it actually means._
 
@@ -22,7 +22,7 @@ The new `restack` operation, for each branch in its scope, ensures that its pare
 
 Why remove the `regen` version of `fix`? Quick reminder, `regen` was meant to allow for easily constructing Graphite stacks from “stacks” of git branches that Graphite previously did not know about, or whose Graphite. Now that branches need to be explicitly tracked with `gt branch track`, the new way to do this is to track each branch, specifying its parent as you go!
 
-#### Understanding when it is safe to run `git` commands
+### Understanding when it is safe to run `git` commands
 
 _A common ask we get is around interoperability with raw `git` — we hope that the new model of restacking allows us to do this a little better!_
 
