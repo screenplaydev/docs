@@ -3,15 +3,15 @@
 At the moment, Graphite caches three types of data in our database:
 
 * **Personal data**: For example, user avatar image,  user name, user email. These are fields used throughout our website that we don't want to have to re-query GitHub for every time.&#x20;
-* **Org membership**: For example, Tomas is a member of the Graphite org. We pretty much exclusively use this information for analytics purposes (How many users do we currently have at Graphite? For users at Graphite, what is their average load time?)
+* **Org membership**: For example, "Tomas is a member of the Graphite org". We exclusively use this information for analytics purposes (How many users do we currently have at Graphite? For users at Graphite, what is their average load time?)
 * **PR metadata**: Specifically,
   * Title
   * Description
   * Author
   * Number of lines added / removed
   * Branch name and name of branch you're merging in to (we use this to construct the stack)
-  * Is merged
-  * Is closed
+  * Commit SHAs for head and base of each revision (we use this to show prior versions and to support `gt downstack get` )
+  * Status (open, merged, closed)
   * Reviewers (and associated status: approved, request changes, etc.)
   * CI rollup status (passing, failing, etc.)
   * Along with a handful of timestamps (created at, updated at., etc.)
