@@ -18,9 +18,13 @@ brew install withgraphite/tap/graphite
 gt --version
 ```
 
+### Node.js versioning
+
+We develop Graphite with and set the Homebrew dependency to Node.js v16 (current LTS version until October 2022), but Graphite should run with no major issues on any current version of Node.  If you run into any issues that seem Node-related, try using v16 if you're able to as a first workaround!
+
 ### **Windows**
 
-If you'd like to use Graphite on Windows, we recommend working within Windows Subsystem for Linux.  Follow the [instructions here](https://docs.microsoft.com/en-us/windows/wsl/install) to set it up.  After setting up WSL, you can [set up nvm/node/npm](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl) and then install Graphite as normal!
+If you'd like to use Graphite on Windows, we recommend working within Windows Subsystem for Linux.  Follow the [instructions here](https://docs.microsoft.com/en-us/windows/wsl/install) to set it up.  After setting up WSL, you can [set up nvm/node/npm](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl) and then install Graphite as normal!  We are slowly working towards better native Windows support — if you'd like to stay up to date, the discussions are often found in our community Slack.
 
 ### **Initialization**
 
