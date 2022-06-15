@@ -18,6 +18,8 @@ brew install withgraphite/tap/graphite
 gt --version
 ```
 
+See the following page instructions on setting up shell tab completion after installation.
+
 ### Node.js versioning
 
 We develop Graphite with and set the Homebrew dependency to Node.js v16 (active LTS version until October 2022), but Graphite should run with no major issues on any current version of Node.  If you run into any issues that seem Node-related, try using v16 if you're able to as a first workaround!

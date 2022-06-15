@@ -1,6 +1,6 @@
-# Completion setup
+# Shell completion setup
 
-Graphite supports `bash` and `zsh` auto-completion!  After installing Graphite for the first time, you can run (e.g. if using `zsh`, the default on Mac):\
+Graphite supports `bash` and `zsh` tab completion. After installing Graphite for the first time, you can run (e.g. if using `zsh`, the default on Mac):\
 `gt completion >> ~/.zshrc`
 
 For `bash`, you'd replace `.zshrc` with `.bashrc` or `.bash_profile`.\
