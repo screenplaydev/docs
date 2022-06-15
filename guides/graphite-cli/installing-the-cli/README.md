@@ -41,7 +41,7 @@ cd ~/my-project
 gt repo init
 ```
 
-After generating the config, the `repo init` offers the option to add existing branches to Graphite by stacking them onto your trunk branch.
+After generating the config, the `repo init` offers the option to add existing branches to Graphite by stacking them onto your trunk branch.  Many users will not need this and just use Graphite for new branches — if that is the case, feel free to skip.
 
 Once you've set up the CLI, it's time to authenticate with your GitHub account via the Graphite dashboard.
 
