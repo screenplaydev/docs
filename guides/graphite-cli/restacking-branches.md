@@ -1,6 +1,6 @@
 # Restacking branches
 
-Graphite's main value on top of Git is the dependency management for your branches, i.e. keeping track of the "parent" of a given branch.  When a parent branch changes in some way or is deleted, vanilla Git, because it does not have this concept of branch dependencies, leaves the parent as is.
+A key benefit of using Graphite as opposed to vanilla Git when working with stacks is dependency management for your branches, i.e. keeping track of the "parent" of a given branch.  When a parent branch changes in some way or is deleted, vanilla Git, because it does not have this concept of branch dependencies, leaves the parent as is.
 
 The Graphite CLI introduces "restacking", which is the process of ensuring that the history of a branch is updated when its parent changes.  Consider where we left off on the previous page.  Although `part_2` is now dependent on main, we haven't yet restacked it, and we can see that by viewing the Git history with `gt log long`:
 
