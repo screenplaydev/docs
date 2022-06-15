@@ -1,10 +1,3 @@
----
-description: >-
-  The Graphite CLI docs are currently ⚠️ under construction ⚠️ as we move to
-  v0.19.0 which includes many changes and improvements.  If anything is
-  confusing or doesn't seem to work, please reach out!
----
-
 # Graphite CLI
 
 
