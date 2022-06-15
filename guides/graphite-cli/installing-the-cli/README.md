@@ -44,12 +44,3 @@ gt repo init
 After generating the config, the `repo init` offers the option to add existing branches to Graphite by stacking them onto your trunk branch.  Many users will not need this and just use Graphite for new branches — if that is the case, feel free to skip.
 
 Once you've set up the CLI, it's time to authenticate with your GitHub account via the Graphite dashboard.
-
-### Completions
-
-Graphite supports `bash` and `zsh` auto-completion!  After installing Graphite for the first time, you can run (e.g. if using `zsh`, the default on Mac):\
-`gt completion >> ~/.zshrc`
-
-For `bash`, you'd replace `.zshrc` with `.bashrc` or `.bash_profile`.\
-\
-_We don't currently support_ `fish` _completions, but we're looking to — if you're passionate about it, maybe you can help us out with an open source contribution!_

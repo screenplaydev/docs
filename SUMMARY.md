@@ -14,6 +14,7 @@
 
 * [Graphite CLI](guides/graphite-cli/README.md)
   * [Installing the CLI](guides/graphite-cli/installing-the-cli/README.md)
+    * [Completion setup](guides/graphite-cli/installing-the-cli/completion-setup.md)
     * [Installing from source](guides/graphite-cli/installing-the-cli/installing-from-source.md)
   * [Authenticating the CLI](guides/graphite-cli/authenticating-the-cli/README.md)
     * [Using a GitHub Personal Access Token](guides/graphite-cli/authenticating-the-cli/using-a-github-personal-access-token.md)
