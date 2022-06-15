@@ -1,4 +1,8 @@
-# CLI command reference
+---
+description: This page is around just in case of emergency — will be removed soon.
+---
+
+# Deprecated CLI command reference (up to v0.18)
 
 {% hint style="info" %}
 You can always access the full help docs for the Graphite CLI by running `gt --help`

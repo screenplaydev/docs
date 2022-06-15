@@ -1,7 +1,7 @@
 # Updating a mid-stack branch
 
 {% hint style="info" %}
-Stacked changes aren't just about adding more branches on top - sometimes you want to go back and change something mid-stack. Graphite makes it easy to update a mid-stack branch, and automatically rebases the changes you have stacked on top.
+Stacked changes aren't just about adding more branches on top - sometimes you want to go back and change something mid-stack. Graphite makes it easy to update a mid-stack branch, and conveniently restacks upstack branches automatically.
 {% endhint %}
 
 ## Adding commits
@@ -28,23 +28,6 @@ gt commit amend -a -m "my updated commit" # -> automatically restacks both upsta
 
 ## Resolving rebase conflicts
 
-If `gt commit create` or `gt commit amend` encounter any conflicts as they recursively rebase your stacked branches, you'll be prompted to resolve your conflicts before continuing. You can do this with the following workflow:
+If `gt commit create` or `gt commit amend` encounter any conflicts as they recursively restack your branches, you'll be prompted to resolve your conflicts before continuing:
 
-```
-# find which files have conflicts
-gt status
-
-# * resolve the rebase conflicts *
-
-# add your changes
-gt add -A
-
-# continue the rebase operation
-gt continue
-```
-
-Here's a (somewhat out of date) video walkthrough of what this looks like:
-
-{% embed url="https://youtu.be/-KfI3aRaoSE" %}
-
-Now that you can create, navigate, and update stacks, it's time to turn them into pull requests!
+![](<../../.gitbook/assets/image (11).png>)

@@ -12,7 +12,11 @@ Note that unlike a standard git workflow - where you create a new branch before 
 1. Start by building your feature on an existing branch
 2. Stage your changes (`gt add -A`)
 3. Create a new branch with those changes (`gt branch create`)
+
+This follows the traditional "stacked changes" workflow of treating each branch as an atomic changeset that contains (at least to start with) a single commit. If you prefer to start with an empty branch, we do support that as well — see the next section.
 {% endhint %}
+
+The below snippet shows two equivalent ways to create a branch with a single commit on it using `gt branch create`.
 
 ```bash
 gt branch checkout main
@@ -28,13 +32,16 @@ gt branch create -a -m "part 1"
 ```
 
 {% hint style="info" %}
-Because you didn't pass in a branch name in the above example, `gt branch create` auto-generated a branch name from your commit message.  You can configure a prefix for `gt branch create` to add to all of your auto-generated branch names using `gt user branch-prefix` - see the [**CLI command reference**](cli-command-reference.md#user) for more details.
+Because you didn't pass in a branch name in the above example, `gt branch create` auto-generated a branch name from your commit message. You can configure a prefix for `gt branch create` to add to all of your auto-generated branch names using `gt user branch-prefix` — see the [**CLI command reference** ](command-reference-v0.19/)for more details.
 {% endhint %}
 
 ### Creating a branch without staged changes
-Graphite also supports creating your branch before starting to code!  In order for Graphite's branch metadata to correctly track dependencies, Graphite will create an empty commit if you create a branch without staged changes, which you are free to either amend or commit on top of with the [**commit-level commands**](updating-a-mid-stack-branch.md).  If you prefer not to amend commits, you can avoid an empty commit in your history with squash-and-merge.
+
+Graphite also supports creating your branch before starting to code! In order for Graphite's branch metadata to correctly track dependencies, Graphite will create an empty commit if you create a branch without staged changes, which you are free to either amend or commit on top of with the [**commit-level commands**](updating-a-mid-stack-branch.md). If you prefer not to amend commits, you can avoid an empty commit in your history with squash-and-merge.
 
 ### Stack more branches on top
+
+Once you have created a branch with your first set of changes, you can continue to build your stack by issuing more `gt branch create` commands as you work!
 
 ```bash
 # * build feature part 2 *
@@ -49,4 +56,3 @@ gt branch create -a -m "part 3"
 ```
 
 Now that you've created a stack, you can use Graphite's CLI to easily visualize it in your terminal.
-

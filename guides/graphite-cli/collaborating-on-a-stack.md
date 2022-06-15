@@ -1,6 +1,6 @@
 # Collaborating on a stack
 
-Version 0.18.4 introduces a new command, `gt downstack sync`, that allows you to pull your coworker's stacks from remote into your local repository.
+`gt downstack get` allows you to pull your coworker's stacks from remote into your local repository.
 
 For example, coworker A could create and submit their branch:
 
@@ -12,18 +12,13 @@ gt ss
 Then, coworker B could pull the branch to their machine:
 
 ```
-gt downstack sync my_branch
+gt downstack get my_branch
 ```
 
-This will sync all branches that `my_branch` depends on (starting from the bottom of the stack).  If any of the branches already exist locally, Graphite will prompt you to confirm that you'd like to overwrite your local copy, and abort if you change your mind.
-
-\
-Coming soon: Instead of overwriting local changes, rebase them onto the remote branch.
-
-We are still iterating on this feature, and would love to hear more on how we can add tooling around it to better support your workflow in the [#downstack-sync-preview](https://graphite-community.slack.com/archives/C03DZLX3MHQ) channel on our [community Slack server](https://join.slack.com/t/graphite-community/shared\_invite/zt-v828g9dz-TIRvlutxTCqgZmxnsO9Knw)!
+This will sync all branches that `my_branch` depends on (starting from the bottom of the stack).  If any of the branches already exist locally and differ from the remote version, Graphite will ask to either overwrite your local changes, or rebase them on top of the remote version.
 
 {% hint style="success" %}
-`gt downstack sync` is also the recommended workflow for developers who work on more than one machine — submit draft PRs for your stack on one machine with `gt stack submit` and use then use `downstack sync` from the other device!
+`gt downstack get` is also the recommended workflow for developers who work on more than one machine — submit draft PRs for your stack on one machine with `gt stack submit` and use then use `downstack get` from the other device!
 {% endhint %}
 
 ### Got coworkers that don't use Graphite yet?
@@ -32,4 +27,8 @@ We strongly recommend that coworkers who wish to collaborate on a branch both us
 
 Only branches that your coworkers have submitted with `gt` can be synced down to your local, as we rely on the Graphite submission to keep track of the dependency tree.
 
-If you want to stack on top of your non-Graphite-using coworkers’ branches, the current recommendation would be to use `git pull`  and set its dependency with `gt us onto <trunk>`, although this flow will change slightly in the near future.
+If you want to stack on top of your non-Graphite-using coworkers’ branches, the best way to do this is `git pull`  and  `gt branch track`.
+
+### Submitting branches in collaborative stacks
+
+Generally, `submit` prefers that your branches are restacked, but **only the branches that you are submitting need to be restacked**.  This means that if you are working on some branches stacked on top of an old version of a coworkers branch, and you'd prefer not to mess with their changes, including rebasing them, you can use `gt upstack restack` on your own changes and `gt upstack submit` to submit them without restacking (and therefore changing) your coworker's branch.  Once your coworker lands their changes, you can `repo sync` and restack your branches on the new version of `main`!

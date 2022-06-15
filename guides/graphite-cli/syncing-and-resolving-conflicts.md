@@ -6,39 +6,20 @@ Very often as you're building, the remote trunk branch will move ahead of your l
 
 ## Syncing your repo
 
-{% hint style="warning" %}
-This section has gotten a little outdated — `gt repo sync` currently does not automatically rebase your branches — use `stack fix --rebase` to do this!  We will be adding this functionality back to `repo sync` very soon 😉
-{% endhint %}
-
 If your remote trunk branch (i.e. `origin/main`) gets ahead of your local repository while you're developing, you can use `gt repo sync` to bring your stack up-to-date.
 
-`gt repo sync` does 3 things:
+`gt repo sync` does a few things:
 
 1. Pulls in the latest changes from `origin/main` (or whatever your trunk branch is)
 2. Prompts you to delete any stale local branches which have been merged in (this works even if you use squash-and-merge)
-3. Recursively rebases your up-stack branches which have not been merged
+3. Optionally restacks your up-stack branches which have not been merged and your current stack onto `main`. If you encounter any merge conflicts, you'll be prompted to resolve them as part of the restack — see the section on restacking for more details!
 
-If you want to automatically push any local branches which were rebased as a result of `gt repo sync`, you can pass the `-r` flag, i.e. `gt repo sync -r`.
+Let's say that we've squash-and-merged in one branch of our three-branch stack from earlier.  We can sync that change in from remote:
 
-## Resolving rebase conflicts
+![](<../../.gitbook/assets/image (15).png>)
 
-{% hint style="info" %}
-Resolving rebase conflicts while running `gt repo sync` works just like it does for `gt commit create` or `gt commit amend`.
-{% endhint %}
+Now, if we run `gt log`, we see that `part_2` is based on `main`:
 
-If `gt repo sync` encounters any conflicts as it recursively rebases your stacked branches, you'll be prompted to resolve your conflicts before continuing. You can do this with the following workflow:
+<img src="../../.gitbook/assets/image (6).png" alt="" data-size="original">
 
-```bash
-# find which files have conflicts
-gt status
-
-# * resolve the rebase conflicts *
-
-# add your changes
-gt add -A
-
-# continue the rebase operation
-gt continue
-```
-
-Now that you've resolved any conflicts, it's time to land your stack!
+Since we didn't restack as part of the `sync` command here (we could have done so with `--restack`), we see that `part_2` needs a restack onto `main`.  We'll talk about what that means in the next section.

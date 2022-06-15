@@ -9,7 +9,7 @@ Clone & build the Graphite CLI:
 ```bash
 git clone https://github.com/withgraphite/graphite-cli
 cd graphite-cli
-# git checkout v0.18.0 (we recommend building from the latest version, but this step is optional!)
+# git checkout v0.19.2 (we recommend building from the latest version tag, but this step is optional!)
 yarn install
 yarn build
 ```
@@ -17,7 +17,7 @@ yarn build
 If you want to install the tool globally:
 
 ```bash
-sudo npm link
+npm link
 ```
 
 Or if you want to install it locally, perhaps just for one user, this can be done by setting a `prefix` before running `npm link`:
