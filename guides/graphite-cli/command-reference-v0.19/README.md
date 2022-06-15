@@ -1,3 +1,9 @@
+---
+description: >-
+  For info about the flags and arguments of any command, just run `gt <command>
+  --help`
+---
+
 # Command Reference (v0.19)
 
 |    auth    |                    |      |                                                         Add your auth token to enable Graphite CLI to create and update your PRs on GitHub.                                                        |
