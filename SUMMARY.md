@@ -8,7 +8,7 @@
 * [Getting started with Graphite](getting-started/getting-started-with-graphite.md)
 * [The Graphite workflow](getting-started/the-graphite-workflow.md)
 * [Privacy & security](getting-started/privacy-and-security/README.md)
-  * [Graphite's use of cached data](getting-started/privacy-and-security/graphites-use-of-cached-data.md)
+  * [GitHub data cached by Graphite](getting-started/privacy-and-security/github-data-cached-by-graphite.md)
 
 ## Guides
 
