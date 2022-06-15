@@ -10,7 +10,7 @@ npm install -g @withgraphite/graphite-cli
 gt --version
 ```
 
-#### **brew installation (on MacOS)**
+#### **brew installation**
 
 ```bash
 # Install Graphite from Homebrew.
@@ -20,7 +20,7 @@ gt --version
 
 ### Node.js versioning
 
-We develop Graphite with and set the Homebrew dependency to Node.js v16 (current LTS version until October 2022), but Graphite should run with no major issues on any current version of Node.  If you run into any issues that seem Node-related, try using v16 if you're able to as a first workaround!
+We develop Graphite with and set the Homebrew dependency to Node.js v16 (active LTS version until October 2022), but Graphite should run with no major issues on any current version of Node.  If you run into any issues that seem Node-related, try using v16 if you're able to as a first workaround!
 
 ### **Windows**
 
@@ -28,18 +28,20 @@ If you'd like to use Graphite on Windows, we recommend working within Windows Su
 
 ### **Initialization**
 
-Graphite stores a small JSON configuration file in `.git/.graphite_repo_config` of your repositiory. On first execution, the CLI will prompt you to provide a minimal amount of info to populate this config.
+Graphite stores a small JSON configuration file in `.git/.graphite_repo_config` of your repositiory. On first execution (per repository), or by directly running `gt repo init`, the CLI will prompt you to provide a minimal amount of info to populate this config (the trunk branch for your development flow).
 
 ```
-# Initialize Graphite.
-cd ~/my-project
-gt repo init
-
 # Authenticate Graphite CLI via the web dashboard (needed to create PRs).
 # Visit https://app.graphite.dev/activate to obtain your auth token and then
 # paste it below.
 gt auth --token <auth_token>
+
+# Initialize Graphite for your repository
+cd ~/my-project
+gt repo init
 ```
+
+After generating the config, the `repo init` offers the option to add existing branches to Graphite by stacking them onto your trunk branch.
 
 Once you've set up the CLI, it's time to authenticate with your GitHub account via the Graphite dashboard.
 
