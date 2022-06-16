@@ -18,6 +18,8 @@
     * [Installing from source](guides/graphite-cli/installing-the-cli/installing-from-source.md)
   * [Authenticating the CLI](guides/graphite-cli/authenticating-the-cli/README.md)
     * [Using a GitHub Personal Access Token](guides/graphite-cli/authenticating-the-cli/using-a-github-personal-access-token.md)
+  * [Familiarizing yourself with gt](guides/graphite-cli/familiarizing-yourself-with-gt.md)
+  * [Initializing gt in a repo](guides/graphite-cli/initializing-gt-in-a-repo.md)
   * [Creating a stack](guides/graphite-cli/creating-a-stack.md)
   * [Viewing a stack](guides/graphite-cli/viewing-a-stack.md)
   * [Navigating a stack](guides/graphite-cli/navigating-a-stack.md)
