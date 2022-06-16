@@ -4,7 +4,7 @@ Welcome to Graphite! Once you've installed the CLI, it's time to start learning 
 \
 We'll start with the basics of creating a stack of changes, submitting the changes for review, addressing comments, and merging them.  Later on in the guide, we'll get into other topics including reordering stacked branches and collaborating on stacks with your teammates.\
 \
-Graphite's commands (for the most part) follow a noun-verb model, i.e. `gt branch create` creates a branch.  We'll go over most commands in the following pages. If you at any time need help remembering a command or how it works, we do our best to provide a multitude of ways to unblock yourself:
+Graphite's commands (for the most part) follow a noun-verb model, i.e. `gt branch create` creates a branch.  We'll go over most commands in the following pages. If you at any time need help remembering a command, how it works, or what the shortcuts are, we do our best to provide a multitude of ways to unblock yourself:
 
 * `--help` options for every command
   * Run `gt --help` to see the list of top-level commands (mostly nouns)
