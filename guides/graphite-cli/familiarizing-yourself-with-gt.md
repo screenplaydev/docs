@@ -14,3 +14,5 @@ Graphite's commands (for the most part) follow a noun-verb model, i.e. `gt branc
 * The "Command reference" page found at the end of this guide.
 
 If you ever run into trouble figuring something out, or have a suggestion on how this documentation might be improved, please reach out in our community Slack channel.
+
+{% embed url="https://join.slack.com/t/graphite-community/shared_invite/zt-1as9rdo7r-pYmEZzt6M1EhTkvJFNhsnQ" %}
