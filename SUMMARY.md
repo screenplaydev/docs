@@ -32,6 +32,7 @@
   * [Modifying a stack](guides/graphite-cli/modifying-a-stack.md)
   * [Collaborating on a stack](guides/graphite-cli/collaborating-on-a-stack.md)
   * [Command shortcuts](guides/graphite-cli/command-shortcuts.md)
+  * [Configuration](guides/graphite-cli/configuration.md)
   * [Multiple checkout (experimental)](guides/graphite-cli/multiple-checkout-experimental.md)
   * [Command Reference (v0.19)](guides/graphite-cli/command-reference-v0.19/README.md)
     * [Deprecated CLI command reference (up to v0.18)](guides/graphite-cli/command-reference-v0.19/cli-command-reference.md)
