@@ -9,12 +9,14 @@ Under the hood, `gt` uses native `git` commands and stores all of the metadata o
 Graphite's CLI features a **git passthrough** - `gt` will pass any unrecognized commands thru to `git`, so you can run commands like `gt status` or `gt remote`, even though they aren't native commands in `gt`.
 
 {% hint style="info" %}
-Git passthrough helps to avoid confusion about when to use `gt` vs. `git` - you can (and should) use `gt` for everything! For commands like `gt branch` which differ from their git equivalents, we recommend using the `gt` version.
+Git passthrough helps to avoid confusion about when to use `gt` vs. `git` - you can (and should) use `gt` for everything! For commands like `gt branch` which differ from their git equivalents, we recommend using the `gt` version to automatically keep your stacks in sync.
 {% endhint %}
 
 ## Fixing your stacks when you use `git`
 
-Because of the "restacking" model, it is always safe to update your branches with _simple_ `git` commands as a `gt upstack restack` on each child will rebase descendants such that they have the new version in their history.  We specify _simple_ here because there is some nuance to using `git rebase` — see below for details.
+Because of the "restacking" model, it is always safe to change your branches with `git` commands, as a `gt upstack restack` once you are done will ensure that their children are correctly rebased on top.
+
+You can even perform complex actions like an interactive rebase and then `upstack restack`, although we do provide a convenience command `gt branch edit` that combines these two operations into a single command.
 
 ### Branches created outside of Graphite
 
@@ -37,15 +39,4 @@ gt branch track feature
 `gt branch track` can also be used to fix Graphite metadata if it ever becomes corrupted or invalid due to a Graphite bug or other issue.
 {% endhint %}
 
-### Untracking a branch
-
-There is also a `gt branch untrack` command that you can use to stop tracking a branch with Graphite without deleting it.  Note that this will also result in all descendants of this branch becoming untracked as well; use `upstack onto` (next page) to move them onto a new parent first.
-
-### On using `git rebase`
-
-The CLI's engine works keeps track of the base of each branch — i.e. the commit in its history that corresponds to its parent branch.  This means that if you use a vanilla `git rebase` that removes that commit from the branch's history, your branch and its children may suddenly become untracked! In order to bring the branch back into Graphite, you will need to ensure the branch is correctly based on its parent, and then use `gt track` to fix its metadata.
-
-Rebases that don't remove that base of the branch from its history are safe — for example, running a `git rebase -i` on the commits of a branch is safe, although we provide a convenience command for this called `gt branch edit` that runs an interactive rebase followed by `upstack restack` on each child of the branch.
-
-
-
+There is also a `gt branch untrack` command that you can use to stop tracking a branch with Graphite without deleting it.
