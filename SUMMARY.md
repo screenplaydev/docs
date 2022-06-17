@@ -29,7 +29,7 @@
   * [Updating a mid-stack branch](guides/graphite-cli/updating-a-mid-stack-branch.md)
   * [Merging a stack](guides/graphite-cli/merging-a-stack.md)
   * [Mixing gt and git](guides/graphite-cli/mixing-gt-and-git.md)
-  * [Modifying a stack](guides/graphite-cli/modifying-a-stack.md)
+  * [Reordering branches in a stack](guides/graphite-cli/modifying-a-stack.md)
   * [Collaborating on a stack](guides/graphite-cli/collaborating-on-a-stack.md)
   * [Command shortcuts](guides/graphite-cli/command-shortcuts.md)
   * [Configuration](guides/graphite-cli/configuration.md)
