@@ -1,12 +1,14 @@
 # Configuration
 
-Graphite offers configuration options both on the global (user) level, and on the repo level.
+Graphite offers configuration options both on the global (user) level, and on the repo level.  Note that when run without options, the commands described below display the configured value.
 
-### User configuration
+### User-level configuration
+
+Commands found under `gt user`
 
 #### Tips
 
-You can toggle tips `gt user tips --enable` and `gt user tips --disable`.
+You can toggle tips with `gt user tips --enable` and `gt user tips --disable`.
 
 #### Editor
 
@@ -20,4 +22,24 @@ If you don't specify a name for your branch (but do specify a commit message) wh
 2. A custom prefix (e.g. initials): `gt user branch-prefix --[set <prefix`>`|reset]`
 3. The character with which to replace unsupported symbols (i.e. whitespace and anything other than alphanumeric characters, periods, dashes, underscores, and slashes:
    * `gt user branch-replacement --set-[underscore|dash|empty]`
+
+### Repo-level configuration
+
+Commands found under `gt repo`
+
+#### Git remote name
+
+Graphite defaults to pushing to and pulling from `origin`. if you have configured a different name for your remote, you can set it with:
+
+`gt repo remote --set <value>`
+
+**GitHub repository information**
+
+Graphite infers the GitHub repository name and owner from the remote URL, but in cases where they are not inferred correctly, you can use:
+
+`gt repo [name|owner] --set <value>`
+
+####
+
+####
 
