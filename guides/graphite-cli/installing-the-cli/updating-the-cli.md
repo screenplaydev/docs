@@ -3,7 +3,7 @@
 With NPM:
 
 ```
-npm update -g @withgraphite/graphite-cli
+npm install -g @withgraphite/graphite-cli@latest
 ```
 
 With Homebrew:
