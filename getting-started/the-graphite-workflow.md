@@ -33,16 +33,18 @@ gt branch create -a feat-stories-API -m "Stories - API [1/3]"
 ```
 
 {% hint style="info" %}
-Note that if you don't pass in a branch name, `gt branch create` will auto-generate a branch name from your commit message. You can configure a prefix for `gt branch create` to add to all of your auto-generated branch names using `gt user branch-prefix` - see the [**CLI command reference**](../guides/graphite-cli/command-reference-v0.19/cli-command-reference.md#user) for more details.
+Note that if you don't pass in a branch name, `gt branch create` will auto-generate a branch name from your commit message. You can configure a prefix for `gt branch create` to add to all of your auto-generated branch names using `gt user branch-prefix.`
 {% endhint %}
 
 ![](<../.gitbook/assets/01 new branch.png>)
 
-Note that unlike a standard git workflow - where you create a new branch before working on your feature - with `gt` you do the following:
+Note that unlike a standard git workflow - where you create a new branch before working on your feature - with `gt` we recommend doing the following:
 
 1. Start by building your feature on an existing branch
 2. Add your unstaged changes with `gt add` (note that this will pass through to native git)
 3. Create a new branch and commit simultaneously with `gt branch create -m "{your commit message}"`
+
+You can still create a branch before staging changes, but Graphite will automatically create an empty commit on the branch.  (This was a requirement of our legacy data model and may change in a future version!)
 
 Graphite keeps track of the parent branch so that it can always fix your stacks if something changes underneath.
 

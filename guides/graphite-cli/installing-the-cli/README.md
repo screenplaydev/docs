@@ -27,22 +27,3 @@ We develop Graphite with and set the Homebrew dependency to Node.js v16 (active 
 ### **Windows**
 
 If you'd like to use Graphite on Windows, we recommend working within Windows Subsystem for Linux.  Follow the [instructions here](https://docs.microsoft.com/en-us/windows/wsl/install) to set it up.  After setting up WSL, you can [set up nvm/node/npm](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl) and then install Graphite as normal!  We are slowly working towards better native Windows support — if you'd like to stay up to date, the discussions are often found in our community Slack.
-
-### **Initialization**
-
-Graphite stores a small JSON configuration file in `.git/.graphite_repo_config` of your repositiory. On first execution (per repository), or by directly running `gt repo init`, the CLI will prompt you to provide a minimal amount of info to populate this config (the trunk branch for your development flow).
-
-```
-# Authenticate Graphite CLI via the web dashboard (needed to create PRs).
-# Visit https://app.graphite.dev/activate to obtain your auth token and then
-# paste it below.
-gt auth --token <auth_token>
-
-# Initialize Graphite for your repository
-cd ~/my-project
-gt repo init
-```
-
-After generating the config, the `repo init` offers the option to add existing branches to Graphite by stacking them onto your trunk branch.  Many users will not need this and just use Graphite for new branches — if that is the case, feel free to skip.
-
-Once you've set up the CLI, it's time to authenticate with your GitHub account via the Graphite dashboard.
