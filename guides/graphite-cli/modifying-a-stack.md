@@ -21,3 +21,12 @@ If you've created a stack of several branches, you can change the order of the s
 * After reordering, you can run `gt stack submit` to create PRs or update the merge-bases of existing PRs.
 
 ![](../../.gitbook/assets/downstack\_edit\_demo\_large.gif)
+
+## `gt branch create --insert`
+
+With `--insert`, you can create a new branch based on the current branch and automatically rebase the existing children of the current branch onto the new branch.  You can use `-i` for short:
+
+![](<../../.gitbook/assets/image (10).png>)
+
+
+

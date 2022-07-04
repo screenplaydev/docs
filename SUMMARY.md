@@ -27,7 +27,7 @@
   * [Creating pull requests](guides/graphite-cli/creating-pull-requests.md)
   * [Syncing with remote](guides/graphite-cli/syncing-and-resolving-conflicts.md)
   * [Restacking branches](guides/graphite-cli/restacking-branches.md)
-  * [Updating a mid-stack branch](guides/graphite-cli/updating-a-mid-stack-branch.md)
+  * [Updating mid-stack branches](guides/graphite-cli/updating-a-mid-stack-branch.md)
   * [Merging a stack](guides/graphite-cli/merging-a-stack.md)
   * [Mixing gt and git](guides/graphite-cli/mixing-gt-and-git.md)
   * [Reordering branches in a stack](guides/graphite-cli/modifying-a-stack.md)
