@@ -22,7 +22,7 @@ If you've created a stack of several branches, you can change the order of the s
 
 ![](../../.gitbook/assets/downstack\_edit\_demo\_large.gif)
 
-## `gt branch create --insert`
+### `gt branch create --insert`
 
 With `--insert`, you can create a new branch based on the current branch and automatically rebase the existing children of the current branch onto the new branch.  You can use `-i` for short:
 
