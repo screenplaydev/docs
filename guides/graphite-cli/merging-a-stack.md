@@ -8,11 +8,19 @@ As a result, we strongly recommend merging via the Graphite UI over merging via 
 If you haven't yet tried it, check out the instructions [here](https://docs.graphite.dev/guides/graphite-dashboard/merging-your-pull-requests#merging-a-stack-of-prs).
 {% endhint %}
 
-To merge a stack using the Graphite CLI, we recommend using the "Merge..." button in the [Graphite dashboard](https://app.graphite.dev), which will queue merge jobs for each PR in your stack.  Alternatively, merge the PRs in the stack one at a time:
+### Merging a stack via the Graphite dashboard
 
-1. Merge the PR at the bottom of the stack into `main` on the [Graphite dashboard](https://app.graphite.dev) (or via GitHub).
-2. Run `gt repo sync`.
-3. Checkout the next PR in your stack (`gt branch up`) and run `gt stack submit` to force push the rebased branch.
+To merge a stack using the Graphite CLI, we recommend using the "Merge..." button in the [Graphite dashboard](https://app.graphite.dev), which will queue merge jobs for each PR in your stack, automating the process described below.
+
+
+
+### Merging a stack via the Graphite CLI
+
+Alternatively, merge the PRs in the stack one at a time:
+
+1. Merge the bottom PR of your stack into your trunk on the [Graphite dashboard](https://app.graphite.dev) (or via GitHub).
+2. Run `gt repo sync --restack` from any branch of your stack to pull trunk to local, delete the merged branch, and restack the rest of your stack on trunk.
+3. From any branch in your stack, run `gt stack submit` to force push the restacked branches so that the new bottom of your stack can be merged into trunk.
 4. Repeat until you've landed all of the branches in your stack.
 
 {% hint style="success" %}

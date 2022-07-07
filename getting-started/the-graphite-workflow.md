@@ -116,7 +116,7 @@ You can also submit multiple changes at a time for review and approval:
 ```bash
 # navigate to the top of the stack
 gt branch checkout main
-gt branch up 2 # -> checks out the branch 2 levels upstack (in this case feat-stories-frontend)
+gt branch next 2 # -> checks out the branch 2 levels upstack (in this case feat-stories-frontend)
 
 # submit the current branch and all downstack branches to GitHub for review
 gt stack submit
