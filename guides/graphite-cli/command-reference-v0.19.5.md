@@ -4,7 +4,17 @@ description: >-
   --help`
 ---
 
-# Command Reference (v0.19)
+# Command Reference (v0.19.5)
+
+{% hint style="info" %}
+The aliases listed are the shortest possible way to invoke the command.  A noun-verb command can be typed all of the following ways:
+
+* `gt branch create`
+* `gt b create`
+* `gt branch c`
+* `gt b c`
+* `gt bc`
+{% endhint %}
 
 |    auth    |                    |        |                                                         Add your auth token to enable Graphite CLI to create and update your PRs on GitHub.                                                        |
 | :--------: | :----------------: | :----: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |

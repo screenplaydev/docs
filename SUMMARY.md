@@ -35,7 +35,7 @@
   * [Command shortcuts](guides/graphite-cli/command-shortcuts.md)
   * [Configuration](guides/graphite-cli/configuration.md)
   * [Multiple checkout (experimental)](guides/graphite-cli/multiple-checkout-experimental.md)
-  * [Command Reference (v0.19)](guides/graphite-cli/command-reference-v0.19.md)
+  * [Command Reference (v0.19.5)](guides/graphite-cli/command-reference-v0.19.5.md)
   * [A note on CLI v0.19](guides/graphite-cli/a-note-on-cli-v0.19.md)
 * [Graphite dashboard](guides/graphite-dashboard/README.md)
   * [Getting started with the dashboard](guides/graphite-dashboard/getting-started-with-the-dashboard.md)
