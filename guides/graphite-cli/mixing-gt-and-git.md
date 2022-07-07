@@ -6,11 +6,19 @@ Under the hood, `gt` uses native `git` commands and stores all of the metadata o
 
 ## Git passthrough
 
-Graphite's CLI features a **git passthrough** - `gt` will pass any unrecognized commands thru to `git`, so you can run commands like `gt status` or `gt remote`, even though they aren't native commands in `gt`.
+Graphite's CLI features a **git passthrough** - `gt` will pass any unrecognized commands thru to `git`, so you can run commands like `gt add`or `gt status`, even though they aren't native commands in `gt`.
 
 {% hint style="info" %}
 Git passthrough helps to avoid confusion about when to use `gt` vs. `git` - you can (and should) use `gt` for everything! For commands like `gt branch` which differ from their git equivalents, we recommend using the `gt` version.
 {% endhint %}
+
+#### Git commands that Graphite users may find useful:
+
+* `git add`: Stage files to be committed; `-p` is helpful for precise cases.
+* `git stash`: Save changes for later (retrieve with `git stash pop`).  Since restacking requires the working tree to be clean, stashing changes you don't intend to commit is often necessary while using `gt`. The `-p` option is just like `git add`'s.
+* `git diff`: See what has changed between two branches.
+* `git status`: Keep track of your worktree and staging area, just like `git`
+* `git rebase`: Useful for preparing branches created outside of Graphite to be tracked (see below).  Also potentially dangerous (see further below).
 
 ## Fixing your stacks when you use `git`
 
@@ -18,7 +26,7 @@ Because of the "restacking" model, it is always safe to update your branches wit
 
 ### Branches created outside of Graphite
 
-If you end up using `git` instead of `gt` to create a branch or commit and want to stack on top of it with Graphite, you can use `gt track` to initialize its Graphite metadata:
+If you use `git` instead of `gt` to create a branch, you need to let `gt` know what its parent is.  That's what `gt branch track` is for.  When run, it prompts you to select a parent for the current branch from the branch's Git history. &#x20;
 
 ```bash
 # Ensure the branch you want to track has the desired parent in its history
@@ -32,16 +40,24 @@ gt branch track
 # If there is more than one potential parent for feature,
 # you will be prompted to select one.
 
-# Now we're on `feature`, it is tracked, and `main` is its parent
+# Now `feature` is tracked and `main` is its parent
+gt branch down # checks out main
+
 ```
 
-{% hint style="info" %}
+`gt branch track --force` skips the prompt and chooses the nearest ancestor that is already tracked.  See the command `--help` for more options.
+
+{% hint style="warning" %}
 `gt branch track` can also be used to fix Graphite metadata if it ever becomes corrupted or invalid due to a Graphite bug or other issue.
 {% endhint %}
 
+### Tracking a whole stack at once
+
+What if you've created a stack of multiple branches outside of Graphite?  `gt downstack track` allows you to track multiple branches recursively.  Run it from the tip of a stack to track the entire thing by selecting the parent of each branch until you reach a branch that is already tracked. The `--force` flag  chooses the nearest ancestor of each branch as its parent.
+
 ### Untracking a branch
 
-There is also a `gt branch untrack` command that you can use to stop tracking a branch with Graphite without deleting it.  Note that this will also result in all descendants of this branch becoming untracked as well; use `upstack onto` (next page) to move them onto a new parent first.
+There is also a `gt branch untrack` command that you can use to stop tracking a branch without deleting it from `git`.  Note that this will also result in all descendants of this branch becoming untracked as well; to avoid this, use `upstack onto` (next page) to move them onto a new parent first.
 
 ### On using `git rebase`
 
