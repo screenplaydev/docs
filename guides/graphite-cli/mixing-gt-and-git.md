@@ -18,7 +18,7 @@ Because of the "restacking" model, it is always safe to update your branches wit
 
 ### Branches created outside of Graphite
 
-If you use `git` instead of `gt` to create a branch, you need to let `gt` know what its parent is.  That's what `gt branch track` is for.  When run, it prompts you to select a parent for the current branch from the branch's Git history. &#x20;
+If you end up using `git` instead of `gt` to create a branch or commit and want to stack on top of it with Graphite, you can use `gt track` to initialize its Graphite metadata:
 
 ```bash
 # Ensure the branch you want to track has the desired parent in its history
@@ -32,24 +32,16 @@ gt branch track
 # If there is more than one potential parent for feature,
 # you will be prompted to select one.
 
-# Now `feature` is tracked and `main` is its parent
-gt branch down # checks out main
-
+# Now we're on `feature`, it is tracked, and `main` is its parent
 ```
 
-`gt branch track --force` skips the prompt and chooses the nearest ancestor that is already tracked.  See the command `--help` for more options.
-
-{% hint style="warning" %}
+{% hint style="info" %}
 `gt branch track` can also be used to fix Graphite metadata if it ever becomes corrupted or invalid due to a Graphite bug or other issue.
 {% endhint %}
 
-### Tracking a whole stack at once
-
-What if you've created a stack of multiple branches outside of Graphite?  `gt downstack track` allows you to track multiple branches recursively.  Run it from the tip of a stack to track the entire thing by selecting the parent of each branch until you reach a branch that is already tracked. The `--force` flag  chooses the nearest ancestor to be the parent at each step.
-
 ### Untracking a branch
 
-There is also a `gt branch untrack` command that you can use to stop tracking a branch without deleting it from `git`.  Note that this will also result in all descendants of this branch becoming untracked as well; to avoid this, use `upstack onto` (next page) to move them onto a new parent first.
+There is also a `gt branch untrack` command that you can use to stop tracking a branch with Graphite without deleting it.  Note that this will also result in all descendants of this branch becoming untracked as well; use `upstack onto` (next page) to move them onto a new parent first.
 
 ### On using `git rebase`
 
