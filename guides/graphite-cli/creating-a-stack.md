@@ -32,7 +32,7 @@ gt branch create -a -m "part 1"
 ```
 
 {% hint style="info" %}
-Because you didn't pass in a branch name in the above example, `gt branch create` auto-generated a branch name from your commit message. You can configure a prefix for `gt branch create` to add to all of your auto-generated branch names using `gt user branch-prefix` — see the [**CLI command reference** ](command-reference-v0.19.6.md)for more details.
+Because you didn't pass in a branch name in the above example, `gt branch create` auto-generated a branch name from your commit message. You can configure a prefix for `gt branch create` to add to all of your auto-generated branch names using `gt user branch-prefix` — see the [**CLI command reference** ](command-reference-v0.19.md)for more details.
 {% endhint %}
 
 ### Creating a branch without staged changes
