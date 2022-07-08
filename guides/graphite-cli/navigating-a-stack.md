@@ -23,12 +23,6 @@ Now, you can see in `gt log short` you're on `part_1` as intended:
 
 ## Moving up and down a stack
 
-{% hint style="info" %}
-**Upstack**: branches further away from `main` in a stack (more recent)
-
-**Downstack**: branches closer to `main` in a stack (less recent)
-{% endhint %}
-
 Sometimes you want to move to the branch directly above or below the current branch in a stack. Graphite's CLI makes this easy:
 
 ```bash
