@@ -42,7 +42,7 @@ gt ss -np
 
 # got some feedback?
 
-gt bco XX-my_first_commit
+gt bco my_first_commit
 
 # address comments
 gt ca -an
