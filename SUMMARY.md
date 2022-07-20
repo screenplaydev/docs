@@ -38,6 +38,7 @@
   * [Command Reference (v0.19.6)](guides/graphite-cli/command-reference-v0.19.md)
   * [A note on CLI v0.19](guides/graphite-cli/a-note-on-cli-v0.19.md)
   * [FAQ](guides/graphite-cli/faq.md)
+  * [Troubleshooting](guides/graphite-cli/troubleshooting.md)
 * [Graphite dashboard](guides/graphite-dashboard/README.md)
   * [Getting started with the dashboard](guides/graphite-dashboard/getting-started-with-the-dashboard.md)
   * [Using your PR inboxes](guides/graphite-dashboard/using-the-review-queue.md)
