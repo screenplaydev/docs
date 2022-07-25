@@ -4,7 +4,7 @@ description: >-
   --help`
 ---
 
-# Command Reference (v0.19.6)
+# Command Reference (v0.20.5)
 
 {% hint style="info" %}
 The aliases listed in the table are the shortest possible way to invoke each command.  A noun-verb command can be typed all of the following ways:
@@ -28,18 +28,21 @@ The aliases listed in the table are the shortest possible way to invoke each com
 |   branch   |       rename       |   brn  |                                           Rename a branch and update metadata referencing it. Note that this removes any associated GitHub pull request.                                           |
 |   branch   |       restack      |   br   |                                                              Ensure the current branch is based on its parent, rebasing if necessary.                                                              |
 |   branch   |        info        |   bi   |                                                                            Display information about the current branch.                                                                           |
+|   branch   |        split       |   bsp  |                                                                          Split the current branch into multiple branches.                                                                          |
 |   branch   |       squash       |   bsq  |                                                               Squash all commits in the current branch and restack upstack branches.                                                               |
 |   branch   |       submit       |   bs   |                                                     Idempotently force push the current branch to GitHub, creating or updating a pull request.                                                     |
 |   branch   |         top        |   bt   |                                                                Switch to the tip branch of the current stack. Prompts if ambiguous.                                                                |
 |   branch   |        track       |   btr  |                       Start tracking the current branch (by default) with Graphite by selecting its parent. This command can also be used to fix corrupted Graphite metadata.                      |
 |   branch   |       untrack      |   but  |                                                   Stop tracking a branch with Graphite. If the branch has children, they will also be untracked.                                                   |
 |   branch   |         up         |   bu   |                                                                  Switch to the child of the current branch. Prompts if ambiguous.                                                                  |
+|  changelog |                    |        |                                                                                  Show the Graphite CLI changelog.                                                                                  |
 |   commit   |        amend       |   ca   |                                                                     Amend the most recent commit and restack upstack branches.                                                                     |
 |   commit   |       create       |   cc   |                                                                          Create a new commit and restack upstack branches.                                                                         |
 | completion |                    |        |                                                                                 Set up bash or zsh tab completion.                                                                                 |
 |  continue  |                    |  cont  |                                                               Continues the most recent Graphite command halted by a merge conflict.                                                               |
 |    dash    |                    |    d   |                                                                                       Open the web dashboard.                                                                                      |
 |    dash    |         pr         | dp/dpr |                                                                              Opens the PR page for the current branch.                                                                             |
+|    docs    |                    |        |                                                                                     Show the Graphite CLI docs.                                                                                    |
 |  downstack |        edit        |   dse  |                                              Edit the order of the branches between trunk and the current branch, restacking all of their descendants.                                             |
 |  downstack |         get        |   dsg  |                                                Get branches from trunk to the specified branch from remote, prompting the user to resolve conflicts.                                               |
 |  downstack |       restack      |   dsr  |                                                    From trunk to the current branch, ensure each is based on its parent, rebasing if necessary.                                                    |
