@@ -18,27 +18,33 @@ Let's submit the entire stack of 3 branches to GitHub with Graphite:
 
 ![Edit the PR body](<../../.gitbook/assets/image (17).png>)
 
-#### PR Body Details
+#### Title Details
+
+For the initial state of the PR title, Graphite will use the title of the first commit on the branch.
+
+#### Body Details
 
 You can configure which text editor to use with Graphite for the PR body by running the command `gt user editor --set` (i.e. `gt user editor --set vim`). By default, Graphite will use your git editor.
 
+For the initial state of the PR body, Graphite will follow the below logic:&#x20;
 
-
-
-
-{% hint style="info" %}
-
-{% endhint %}
-
-{% hint style="warning" %}
 If you have a pull request template saved locally for GitHub, Graphite will automatically detect it and add it to the PR for you to fill out.
-{% endhint %}
+
+You can also configure Graphite to include your commit message(s) in your PR body with `gt user submit-body --include-commit-messages`.  If you have only one commit in the PR, this will not include the title of the commit (first line of message), as this is already the default title.  If you have multiple commits, all of their messages will be included.
+
+#### Reviewers
 
 You can optionally pass `--reviewers` or `-r` to manually specify reviewers for the new pull requests. By default, Graphite will just assign any reviewers specified by [CODEOWNERS files](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) in your repo.
 
 ![Submit with -r specified](<../../.gitbook/assets/image (2).png>)
 
-Your last option will be whether to submit your PRs as draft or published (ready for review).  You can also pass `--draft` or `--publish` to specify this for all PRs in the submit without having to select each time.
+#### Draft state
+
+Your last option will be whether to submit your PRs as draft or published (ready for review).  You can also pass `--draft` or `--publish` to specify this for all PRs in the submit without having to select each time.  In `--no-interactive` mode,  new PRs will default to draft, and existing PRs will remain in the same state.
+
+{% hint style="info" %}
+A common pattern for small changes or to maximize velocity is `gt ss -np` which is the short form of `gt stack submit --no-edit --publish`
+{% endhint %}
 
 Once you've created pull requests from your stack, Graphite will display the links to view them on the Graphite web dashboard:
 
