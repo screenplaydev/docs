@@ -18,11 +18,19 @@ Let's submit the entire stack of 3 branches to GitHub with Graphite:
 
 ![Edit the PR body](<../../.gitbook/assets/image (17).png>)
 
-{% hint style="warning" %}
-You can configure which text editor to use with Graphite for the PR body by running the command `gt user editor --set <editor>`(i.e. `gt user editor --set vim`).  By default, Graphite will use your git editor.
-{% endhint %}
+#### PR Body Details
+
+You can configure which text editor to use with Graphite for the PR body by running the command `gt user editor --set` (i.e. `gt user editor --set vim`). By default, Graphite will use your git editor.
+
+
+
+
 
 {% hint style="info" %}
+
+{% endhint %}
+
+{% hint style="warning" %}
 If you have a pull request template saved locally for GitHub, Graphite will automatically detect it and add it to the PR for you to fill out.
 {% endhint %}
 
@@ -30,7 +38,7 @@ You can optionally pass `--reviewers` or `-r` to manually specify reviewers for 
 
 ![Submit with -r specified](<../../.gitbook/assets/image (2).png>)
 
-Your last option will be whether to submit your PRs as draft or published (ready for review).  You can also pass `--draft` or `--no-draft` to specify this for all PRs in the submit without having to select each time.
+Your last option will be whether to submit your PRs as draft or published (ready for review).  You can also pass `--draft` or `--publish` to specify this for all PRs in the submit without having to select each time.
 
 Once you've created pull requests from your stack, Graphite will display the links to view them on the Graphite web dashboard:
 
@@ -40,8 +48,10 @@ Once you've created pull requests from your stack, Graphite will display the lin
 Note that if you need to cancel your submission or it fails for any reason, your PR titles and bodies won't be lost! We cache them locally so they'll be there for when you run `submit` again.
 {% endhint %}
 
-`gt stack submit` is also the command for updating your PRs after making changes to your stack!  For example, you might open your PRs initially in draft mode, and then later run `gt stack submit --no-draft` to change all PRs in your stack to "ready for review."
+`gt stack submit` is also the command for updating your PRs after making changes to your stack!  For example, you might open your PRs initially in draft mode, and then later run `gt stack submit --publish` to change all PRs in your stack to "ready for review."
 
 ![Running submit again after making changes](<../../.gitbook/assets/image (9).png>)
 
 Now that you can create pull requests from your stack, you may be wondering how to sync your local repo with remote and keep your stacks up-to-date.
+
+`submit` commands are available in all four scopes: `branch submit`(only submits the current branch), `stack submit`(submits the current branch and all ancestors and descendants), `upstack submit` (submits the current branch and all descendants), and `downstack submit`(submits the current branch and all ancestors).
