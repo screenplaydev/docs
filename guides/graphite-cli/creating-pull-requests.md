@@ -18,11 +18,11 @@ Let's submit the entire stack of 3 branches to GitHub with Graphite:
 
 ![Edit the PR body](<../../.gitbook/assets/image (17).png>)
 
-#### Title Details
+#### Title
 
 For the initial state of the PR title, Graphite will use the title of the first commit on the branch.
 
-#### Body Details
+#### Body
 
 You can configure which text editor to use with Graphite for the PR body by running the command `gt user editor --set` (i.e. `gt user editor --set vim`). By default, Graphite will use your git editor.
 
