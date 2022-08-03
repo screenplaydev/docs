@@ -64,6 +64,4 @@ Note that if you need to cancel your submission or it fails for any reason, your
 
 `submit` commands are available in all four scopes: `branch submit`(only submits the current branch), `stack submit`(submits the current branch and all ancestors and descendants), `upstack submit` (submits the current branch and all descendants), and `downstack submit`(submits the current branch and all ancestors).
 
-Now that you can create pull requests from your stack, you may be wondering how to sync your local repo with remote and keep your stacks up-to-date.
-
-``
+Now that you can create pull requests from your stack, you may be wondering how to sync your local repo with remote so that you can clear out merged branches and keep your stacks based on the latest version of trunk.
