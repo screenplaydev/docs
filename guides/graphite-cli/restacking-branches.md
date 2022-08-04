@@ -15,3 +15,5 @@ After running our `restack` command, we can see that Git and Graphite are in agr
 {% hint style="info" %}
 Restacking is running a `git rebase` under the hood, and as with any rebase, you may run into conflicts, in this case between the branch you are restacking and the new version of the parent.  Just like with git, you will be prompted to resolve conflicts before continuing, which you can do with `gt continue`, which is described in a little more detail in the next section.
 {% endhint %}
+
+Just like `submit`, there are `upstack`, `stack`, `downstack`, and `branch` restack commands.  It is likely that most of the time, `stack restack` and `upstack restack` will be the main commands that you use — `downstack restack` and `branch restack` are included for completeness.
