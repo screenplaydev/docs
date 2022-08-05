@@ -13,5 +13,5 @@ brew update && brew upgrade withgraphite/tap/graphite
 ```
 
 {% hint style="info" %}
-The [latest version of the changelog is always available here](https://github.com/withgraphite/graphite-cli/blob/main/.CHANGELOG.md) or by running `gt changelog` (you may want to pipe to a pager or file!)
+The [latest version of the changelog is always available here](https://github.com/withgraphite/graphite-cli/blob/main/.CHANGELOG.md) or by running `gt changelog`.
 {% endhint %}
