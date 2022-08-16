@@ -1,4 +1,4 @@
-# Updating a mid-stack branch
+# Updating mid-stack branches
 
 {% hint style="info" %}
 Stacked changes aren't just about adding more branches on top - sometimes you want to go back and change something mid-stack. Graphite makes it easy to update a mid-stack branch, and conveniently restacks upstack branches automatically.
@@ -31,3 +31,5 @@ gt commit amend -a -m "my updated commit" # -> automatically restacks both upsta
 If `gt commit create` or `gt commit amend` encounter any conflicts as they recursively restack your branches, you'll be prompted to resolve your conflicts before continuing:
 
 ![](<../../.gitbook/assets/image (11).png>)
+
+Note that Graphite does not currently provide its own abort command — `git rebase --abort` is safe to use to abort a single rebase in progress, but will not undo prior restack operations if your command already completed them.&#x20;
