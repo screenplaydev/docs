@@ -35,10 +35,6 @@ gt branch create -a -m "part 1"
 Because you didn't pass in a branch name in the above example, `gt branch create` auto-generated a branch name from your commit message. You can configure a prefix for `gt branch create` to add to all of your auto-generated branch names using `gt user branch-prefix` — see the [**configuration page**](configuration.md) **** for more details.
 {% endhint %}
 
-### Creating a branch without staged changes
-
-Graphite also supports creating your branch before starting to code! In order for Graphite's branch metadata to correctly track dependencies, Graphite will create an empty commit if you create a branch without staged changes, which you are free to either amend or commit on top of with the [**commit-level commands**](updating-a-mid-stack-branch.md). If you prefer not to amend commits, you can avoid an empty commit in your history with squash-and-merge.
-
 ### Stack more branches on top
 
 Once you have created a branch with your first set of changes, you can continue to build your stack by issuing more `gt branch create` commands as you work!
