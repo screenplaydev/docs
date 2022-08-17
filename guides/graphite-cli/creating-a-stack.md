@@ -4,7 +4,7 @@
 Graphite's CLI makes it easy to stack dependent branches on top of each other.
 {% endhint %}
 
-### Creating your first branch
+### Creating your first branch from scratch
 
 {% hint style="warning" %}
 Note that unlike a standard git workflow - where you create a new branch before working on your feature - with `gt` we recommend the following:
@@ -56,3 +56,7 @@ gt branch create -a -m "part 3"
 ```
 
 Now that you've created a stack, you can use Graphite's CLI to easily visualize it in your terminal.
+
+### Creating a stack from an existing branch
+
+If you already have a branch that you would like to split up and turn into a stack you can use the `gt branch split` command. [Learn more ](https://docs.graphite.dev/guides/graphite-cli/squashing-folding-and-splitting#gt-branch-split)about `gt branch split`.
