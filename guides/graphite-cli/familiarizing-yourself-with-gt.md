@@ -15,6 +15,12 @@ Graphite's commands (for the most part) follow a noun-verb model, i.e. `gt branc
 * Tab completion (see the "Shell completion setup" page under "Installing the CLI")
 * The "Command reference" page found at the end of this guide.
 
+{% hint style="info" %}
+Graphite's CLI features a **git passthrough** - `gt` will pass any unrecognized commands thru to `git`, so you can run commands like `gt add`or `gt status`, even though they aren't native commands in `gt`.\
+\
+Git passthrough helps to avoid confusion about when to use `gt` vs. `git` - you should be able to use `gt` for everything in your git workflow. [Learn more here](https://docs.graphite.dev/guides/graphite-cli/mixing-gt-and-git).
+{% endhint %}
+
 ### Definitions
 
 **Stack**: A series of `git` branches that depend on each other.  Starts at `main` (or whatever your trunk branch may be called), and proceeds "upward" as dependent branches are stacked on. Commands within the "stack" noun operate on all ancestors and descendants of a branch.
