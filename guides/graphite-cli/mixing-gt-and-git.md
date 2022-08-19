@@ -24,7 +24,7 @@ Git passthrough helps to avoid confusion about when to use `gt` vs. `git` - you 
 
 Because of the "restacking" model, it is always safe to update your branches with _simple_ `git` commands as a `gt upstack restack` on each child will rebase descendants such that they have the new version in their history.  We specify _simple_ here because there is some nuance to using `git rebase` — see below for details.
 
-### Tracking branches created outside of Graphite
+### Branches created outside of Graphite
 
 If you use `git` instead of `gt` to create a branch, you need to let `gt` know what its parent is.  That's what `gt branch track` is for.  When run, it prompts you to select a parent for the current branch from the branch's Git history. &#x20;
 
@@ -47,7 +47,7 @@ gt branch down # checks out main
 
 `gt branch track --force` skips the prompt and chooses the nearest ancestor that is already tracked.  See the command `--help` for more options.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 `gt branch track` can also be used to fix Graphite metadata if it ever becomes corrupted or invalid due to a Graphite bug or other issue.
 {% endhint %}
 
@@ -57,7 +57,7 @@ What if you've created a stack of multiple branches outside of Graphite?  `gt do
 
 ### Untracking a branch
 
-There is also a `gt branch untrack` command that you can use to stop tracking a branch without deleting it from `git`.  **Note that this will also result in all descendants of this branch becoming untracked as well**; to avoid this, use `upstack onto` to move them onto a new parent first (learn more about `upstack onto` [here](https://docs.graphite.dev/guides/graphite-cli/modifying-a-stack#gt-upstack-onto)).
+There is also a `gt branch untrack` command that you can use to stop tracking a branch without deleting it from `git`.  Note that this will also result in all descendants of this branch becoming untracked as well; to avoid this, use `upstack onto` (next page) to move them onto a new parent first.
 
 ### On using `git rebase`
 
