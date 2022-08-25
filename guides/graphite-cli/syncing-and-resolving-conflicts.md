@@ -1,7 +1,7 @@
-# Syncing with remote
+# Syncing with remote repository
 
 {% hint style="info" %}
-Very often as you're building, the remote trunk branch will move ahead of your local repository, and you'll want to pull in the latest changes and resolve any conflicts before you land your pull requests.
+Often, as you're building, the remote trunk branch will move ahead of your local repository, and you'll want to pull in the latest changes and resolve any conflicts before you land your pull requests.
 {% endhint %}
 
 ## Syncing your repo

@@ -25,7 +25,7 @@
   * [Viewing a stack](guides/graphite-cli/viewing-a-stack.md)
   * [Navigating a stack](guides/graphite-cli/navigating-a-stack.md)
   * [Creating and submitting pull requests](guides/graphite-cli/creating-pull-requests.md)
-  * [Syncing with remote](guides/graphite-cli/syncing-and-resolving-conflicts.md)
+  * [Syncing with remote repository](guides/graphite-cli/syncing-and-resolving-conflicts.md)
   * [Restacking branches](guides/graphite-cli/restacking-branches.md)
   * [Updating mid-stack branches](guides/graphite-cli/updating-a-mid-stack-branch.md)
   * [Merging a stack](guides/graphite-cli/merging-a-stack.md)
