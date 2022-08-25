@@ -22,4 +22,4 @@ Now, if we run `gt log`, we see that `part_2` is based on `main`:
 
 <img src="../../.gitbook/assets/image (6).png" alt="" data-size="original">
 
-Since we didn't restack as part of the `sync` command here (we could have done so with `--restack`), we see that `part_2` needs a restack onto `main`.  We'll talk about what that means in the next section.
+Since we didn't restack as part of the `sync` command here (we could have done so with `--restack`), we see that `part_2` needs a restack onto `main`.  We'll talk about what that means in the next section: [Restacking branches](https://docs.graphite.dev/guides/graphite-cli/restacking-branches).
