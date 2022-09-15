@@ -1,7 +1,7 @@
-# Syncing with remote repository
+# Syncing with remote
 
 {% hint style="info" %}
-Often, as you're building, the remote trunk branch will move ahead of your local repository, and you'll want to pull in the latest changes and resolve any conflicts before you land your pull requests.
+Very often as you're building, the remote trunk branch will move ahead of your local repository, and you'll want to pull in the latest changes and resolve any conflicts before you land your pull requests.
 {% endhint %}
 
 ## Syncing your repo
@@ -22,4 +22,4 @@ Now, if we run `gt log`, we see that `part_2` is based on `main`:
 
 <img src="../../.gitbook/assets/image (6).png" alt="" data-size="original">
 
-Since we didn't restack as part of the `sync` command here (we could have done so with `--restack`), we see that `part_2` needs a restack onto `main`.  We'll talk about what that means in the next section: [restacking branches](https://docs.graphite.dev/guides/graphite-cli/restacking-branches).
+Since we didn't restack as part of the `sync` command here (we could have done so with `--restack`), we see that `part_2` needs a restack onto `main`.  We'll talk about what that means in the next section.
