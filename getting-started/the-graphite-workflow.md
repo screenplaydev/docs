@@ -125,7 +125,7 @@ gt stack submit
 gt log
 ```
 
-![](<../.gitbook/assets/08 stack approved (1) (1) (1).png>)
+![](<../.gitbook/assets/08 stack approved (1) (1).png>)
 
 Whenever you push a stack of PRs to GitHub, Graphite automatically adds a comment to every PR in the stack to help your reviewers navigate between them:
 

@@ -2,7 +2,7 @@
 
 #### Let's say this is the state of your repo - Graphite makes it easy to navigate!
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/image (22).png>)
 
 ## Checking out a branch
 

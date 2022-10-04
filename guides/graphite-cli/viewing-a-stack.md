@@ -8,7 +8,7 @@ Let's continue the example from the previous page and see what our current stack
 
 ### `gt log` (most common)
 
-![](<../../.gitbook/assets/image (22).png>)
+![](<../../.gitbook/assets/image (7).png>)
 
 ### `gt log short` (compact view)
 
