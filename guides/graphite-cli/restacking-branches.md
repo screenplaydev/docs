@@ -10,7 +10,7 @@ We see that `main` has advanced to the squash-and-merge commit for `part_1`, but
 
 ![The results of restacking](<../../.gitbook/assets/image (19).png>)
 
-After running our `restack` command, we can see that Git and Graphite are in agreement about the history.  Now, we might want to resubmit the restacked versions of these branches, or maybe make some changes to them first to address review comments.
+After running our `restack` command, we can see that Git and Graphite are in agreement about the history.  Now, we might want to resubmit the restacked versions of these branches (`gt stack submit`), or maybe make some changes to them first to address review comments (see the following page).
 
 {% hint style="info" %}
 Restacking is running a `git rebase` under the hood, and as with any rebase, you may run into conflicts, in this case between the branch you are restacking and the new version of the parent.  Just like with git, you will be prompted to resolve conflicts before continuing, which you can do with `gt continue`, which is described in a little more detail in the next section.

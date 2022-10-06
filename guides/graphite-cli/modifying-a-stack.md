@@ -1,6 +1,6 @@
-# Reordering branches in a stack
+# Editing the order of branches in a stack
 
-With the Graphite CLI, you can easily modify the dependencies of your branches.
+With the Graphite CLI, you can easily modify the dependencies of your branches. After doing so, you'll want to resubmit with `gt stack submit` to push the changes to remote and update the PR dependencies.
 
 ### `gt upstack onto`
 

@@ -1,8 +1,8 @@
 # Updating mid-stack branches
 
-{% hint style="info" %}
 Stacked changes aren't just about adding more branches on top - sometimes you want to go back and change something mid-stack. Graphite makes it easy to update a mid-stack branch, and conveniently restacks upstack branches automatically.
-{% endhint %}
+
+After updating branches in your stack locally, you can run `gt stack submit` again to push the changes to remote.
 
 ## Adding commits
 
