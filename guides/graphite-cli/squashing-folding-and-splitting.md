@@ -23,3 +23,9 @@ In this mode, you split your branch along already-defined commit boundaries. Eg.
 This mode allows you to split your branch by selecting hunks that you'd like to apply to each new branch. The interface is made up of iterative calls to `git add --patch`, which prompts you to stage your changes. You can split your branch by first staging only those you'd like to include in the first branch, then giving it a name, then moving on to the second, giving that one a name, etc.&#x20;
 
 [See it in action here.](https://twitter.com/withgraphite/status/1550188385008029696?s=20\&t=cVtCTfTQH73eyyhsTbG08Q)
+
+{% hint style="warning" %}
+The branch name on a GitHub PR is immutable, so if you already have a PR open for a branch you're splitting and would like one of the new branches to stay attached to the PR, make sure to give the original branches name to that new branch!\
+\
+For example, if I have a PR open for my branch`new_feature` and I get asked to split out a necessary refactor that I included in the same branch, I can split my branch into `necessary_refactor` and (a now smaller) `new_feature` . When I resubmit, my feature changes will stay attached to any ongoing discussion on the original PR.
+{% endhint %}
