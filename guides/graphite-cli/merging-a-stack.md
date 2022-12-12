@@ -12,7 +12,7 @@ If you haven't yet tried it, check out the instructions [here](https://docs.grap
 
 To merge a stack using the Graphite CLI, we recommend using the "Merge..." button in the [Graphite dashboard](https://app.graphite.dev), which will queue merge jobs for each PR in your stack, automating the process described below.
 
-If you have remaining upstack branches that aren't included in your merge, you'll want to `repo sync --restack` and `submit` after the merge is done.
+If you have remaining upstack branches that aren't included in your merge, you'll want to `repo sync --restack` and `submit` after the merge is done, similar to the process described below.
 
 
 
