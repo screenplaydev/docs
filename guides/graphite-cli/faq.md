@@ -53,3 +53,11 @@ gt ss
 ```
 
 As you can see, replicating the classic workflow is possible, and if you do things like this, you should never really have to worry about the difference between a branch and a commit!
+
+
+
+### Why are my actions running twice?
+
+Because `stack submit` both performs a `git push` and a GitHub API call, occasionally GitHub will pick up both as a [`synchronize`](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull\_request) event on the PR.
+
+We recommend using GitHub's [concurrency](https://docs.github.com/en/actions/using-jobs/using-concurrency) configuration to ensure that you do not have duplicated CI!
